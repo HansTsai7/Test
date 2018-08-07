@@ -1,36 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="ja">
 	<head>
@@ -105,23 +72,6 @@
 		<div class="cmBlockCenter">
 			
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script type="text/javascript">
 <!--
 	function autoCompleteOff(){
@@ -174,7 +124,7 @@
 	}
 
 
-    isSubmitted=false;/*�܂�submit����Ă܂���*/
+    isSubmitted=false;/*まだsubmitされてません*/
 
     //function enterSubmit(keyCode){
     //    if(keyCode == 13){
@@ -187,8 +137,8 @@
     function enterSubmit(keyCode, obj){
     
     	if(keyCode == 13){
-    		f_toHalf(obj); //ID���̔��p����Ή��ŁAEnter�L�[�������_�œ��͒l�͑S�p�˔��p�ɕύX����
-    		if( !isSubmitted ){	/*submit����ĂȂ�������*/
+    		f_toHalf(obj); //ID欄の半角制御対応で、Enterキー押下時点で入力値は全角⇒半角に変更処理
+    		if( !isSubmitted ){	/*submitされてなかったら*/
 		        isSubmitted=!false;
 		        window.document.forms[0].submit();
 	        }
@@ -206,7 +156,7 @@
     //}
 
     function clickSubmit(){
-	    if( !isSubmitted ){	/*submit����ĂȂ�������*/
+	    if( !isSubmitted ){	/*submitされてなかったら*/
 		    isSubmitted=!false;
 		    window.document.forms[0].submit();
 	    }
@@ -217,14 +167,14 @@
 
 	function f_toHalf(obj){
 
-		// ���͒l�擾
+		// 入力値取得
 		var iptDataValue=obj.value;
 
-		// �ϊ��\�͈͂����[�I����`�܂�]
+		// 変換可能範囲を特定[！から～まで]
 		var chrMap = '['+String.fromCharCode(0xff01)+'-'+String.fromCharCode(0xff5e)+']';
 		var chr = new RegExp(chrMap, 'g');
 
-		// �S�p�˔��p�֕ϊ�
+		// 全角⇒半角へ変換
 		iptDataValue=iptDataValue.replace(chr,function(s) {
 			return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
 		});
@@ -275,7 +225,7 @@
 						<td class="cmWidthP50"><img src="/images/logo.gif" class="cmWidth140 cmHeight74" alt="e-staffing"></td>
 						
 						
-						<td class="cmTdRight cmWidthP50"><img src="/images/use_time.gif" class="cmWidth178 cmHeight74" alt='e-staffing�V�X�e�������p���ԁF�����p���ԁ^8:00 - 23:00�^Available time is from 8am to 11pm.'></td>
+						<td class="cmTdRight cmWidthP50"><img src="/images/use_time.gif" class="cmWidth178 cmHeight74" alt='e-staffingシステムご利用時間：ご利用時間／8:00 - 23:00／Available time is from 8am to 11pm.'></td>
 					</tr>
 					<tr class="cmBGColor6699FF">
 						<td colspan="2"><img src="/images/shim.gif" class="cmHeight10 cmWidth01" alt=""></td>
@@ -287,7 +237,7 @@
 				<table class="cmWidth730 cmBlockCenter">
 					<tr class="cmTop">
 						<td class="cmTdCenter cmWidth210">
-							<!--------------------���O�C�����̓t�H�[��---------------------->
+							<!--------------------ログイン入力フォーム---------------------->
 							<table class="cmWidthP100">
 								<tr>
 									<td class="spBGColorCCE5FF">
@@ -303,7 +253,7 @@
 												<td class="cmTdRight" colspan="3"><img src="/images/shim.gif" class="cmHeight10 cmWidth01" alt=""></td>
 											</tr>
 											<tr>
-												<td class="cmTdRight cmWidthP40"><img src="/images/login_comp.gif" class="cmWidth56 cmHeight24" alt="���ID�^CompanyID"></td>
+												<td class="cmTdRight cmWidthP40"><img src="/images/login_comp.gif" class="cmWidth56 cmHeight24" alt="企業ID／CompanyID"></td>
 												<td class="cmWidthP05">&nbsp;</td>
 												
 												<td class="cmWidthP55 cmTdLeft">
@@ -321,7 +271,7 @@
 												<td class="cmTdRight" colspan="3"><img src="/images/shim.gif" class="cmHeight10 cmWidth01" alt=""></td>
 											</tr>
 											<tr>
-												<td class="cmTdRight cmWidthP40"><img src="/images/login_user.gif" class="cmWidth56 cmHeight24" alt="���[�UID�^UserID"></td>
+												<td class="cmTdRight cmWidthP40"><img src="/images/login_user.gif" class="cmWidth56 cmHeight24" alt="ユーザID／UserID"></td>
 												<td class="cmWidthP05">&nbsp;</td>
 												
 												
@@ -341,7 +291,7 @@
 												<td class="cmTdRight" colspan="3"><img src="/images/shim.gif" class="cmHeight10 cmWidth01" alt=""></td>
 											</tr>
 											<tr>
-												<td class="cmTdRight cmWidthP40"><img src="/images/login_pass.gif" class="cmWidth56 cmHeight24" alt="�p�X���[�h�^Password"></td>
+												<td class="cmTdRight cmWidthP40"><img src="/images/login_pass.gif" class="cmWidth56 cmHeight24" alt="パスワード／Password"></td>
 												<td class="cmWidthP05">&nbsp;</td>
 												
 												
@@ -351,7 +301,7 @@
 												
 											</tr>
 											
-											<!--------------------Cookie��񂠂�---------------------->
+											<!--------------------Cookie情報あり---------------------->
 											
 
 											
@@ -361,17 +311,17 @@
 											</tr>
 										</table>
 										<img src="/images/tensen_210.gif" class="cmWidth210 cmHeight01" alt=""><br>
-										<!--------------------���O�C���{�^���E���Z�b�g�{�^��---------------------->
+										<!--------------------ログインボタン・リセットボタン---------------------->
 										<table class="cmWidthP100 cmTableEmpty">
 											<tr>
 												<td class="cmTdRight" colspan="3"><img src="/images/shim.gif" class="cmHeight10 cmWidth01" alt=""></td>
 											</tr>
 											<tr>
-												<td class="cmTdRight cmWidthP45"><a href="#" onclick="document.forms[0].reset()" tabindex=-1 onMouseOut="func_swapImgRestore()" onMouseOver="func_swapImage('Image60','','/images/b_reset_f2.gif',1)"><img id="Image60" src="/images/b_reset.gif" class="cmWidth74 cmHeight20" alt="���Z�b�g"></a></td>
+												<td class="cmTdRight cmWidthP45"><a href="#" onclick="document.forms[0].reset()" tabindex=-1 onMouseOut="func_swapImgRestore()" onMouseOver="func_swapImage('Image60','','/images/b_reset_f2.gif',1)"><img id="Image60" src="/images/b_reset.gif" class="cmWidth74 cmHeight20" alt="リセット"></a></td>
 												<td class="cmTdRight cmWidthP03">&nbsp;</td>
 												<td class="cmWidthP52">
 
-												   <a href="#" onClick="return clickSubmit()" onMouseOut="func_swapImgRestore()" onMouseOver="func_swapImage('Image19','','/images/b_login_f2.gif',1)"><img id="Image19" src="/images/b_login.gif" class="cmWidth90 cmHeight20" alt="���O�C��" ></a>
+												   <a href="#" onClick="return clickSubmit()" onMouseOut="func_swapImgRestore()" onMouseOver="func_swapImage('Image19','','/images/b_login_f2.gif',1)"><img id="Image19" src="/images/b_login.gif" class="cmWidth90 cmHeight20" alt="ログイン" ></a>
 
 												</td>
 											</tr>
@@ -389,14 +339,14 @@
 								<tr>
 									<td>
 										
-										<a href="/do/passwordResetToProc"><img src="/images/b_not_login_es.gif" class="cmWidth210 cmHeight49" alt="���O�C���ł��Ȃ����͂�����"></a><br>
+										<a href="/do/passwordResetToProc"><img src="/images/b_not_login_es.gif" class="cmWidth210 cmHeight49" alt="ログインできない方はこちら"></a><br>
 										
 									</td>
 								</tr>
 							</table>
 							<table class="cmWidth210 cmTableCenter">
 								<tr>
-								<!-- �G���[���b�Z�[�W -->
+								<!-- エラーメッセージ -->
 									<td class="spBGColorFFFFCB">
 										
 									</td>
@@ -406,80 +356,80 @@
 								</tr>
 							</table>
 							
-							<!-- ----------------���T�|�[�g�Z���^�[��---------------- -->
+							<!-- ----------------↓サポートセンター↓---------------- -->
 							<table class="cmWidth210 cmTableCenter">
 								<tr class="cmHeight04">
 								<td colspan="2"><img src="/support/images/tensen_210.gif" class="cmWidth210 cmHeight01 spFloatLeft" alt="">
 									</td></tr>
 								<tr class="spBGColorCCE5FF cmHeight20">
-									<td class="lh12 cmTdLeft"><span class="spSpan3366CC">&nbsp;<b>�T�|�[�g�Z���^�[</b></span></td>
+									<td class="lh12 cmTdLeft"><span class="spSpan3366CC">&nbsp;<b>サポートセンター</b></span></td>
 								</tr>
 								<tr>
-									<td class="lh12 cmCenter cmFontSize08">�d�b���⍇��  Toll free<br>
+									<td class="lh12 cmCenter cmFontSize08">電話お問合せ  Toll free<br>
 									<span style="font-weight:bold;font-size:14pt;">0120-288-187</span>
 									</td>
 								</tr>
 								<tr class="cmHeight04"><td colspan="2"><img src="/support/images/tensen_210.gif" class="cmWidth210 cmHeight01 spFloatLeft" alt=""><br></td></tr>
 								<tr>
 									<td colspan="2" class="lh12 cmNoWrap cmTdCenter cmFontSize08">
-										���[�����⍇�� E-mail<br><span style="color:red;font-weight:bold;font-size:11pt;"><a href="mailto:support@e-staffing.co.jp">support@e-staffing.co.jp</a></span>
+										メールお問合せ E-mail<br><span style="color:red;font-weight:bold;font-size:11pt;"><a href="mailto:support@e-staffing.co.jp">support@e-staffing.co.jp</a></span>
 									</td>
 								</tr>
 								<tr class="cmHeight04"><td colspan="2"><img src="/support/images/tensen_210.gif" class="cmWidth210 cmHeight01 spFloatLeft" alt=""><br></td></tr>
 								<tr>
 									<td class="lh12 cmTdCenter cmFontSize08">
-										��t����<br>
-										<span class="cmFontSize10"><b>���`���^9:00�`19:00</b></span><br>
-										�i�j���E�N���N�n�������j<br>
+										受付時間<br>
+										<span class="cmFontSize10"><b>月～金／9:00～19:00</b></span><br>
+										（祝日・年末年始を除く）<br>
 									</td>
 								</tr>
 							</table>
-							<!------------------���T�|�[�g�Z���^�[��------------------>
+							<!------------------↑サポートセンター↑------------------>
 							
 
 							
 							<img src="/images/shim.gif" class="cmHeight10 cmWidth01" alt=""><br>
 							<a href="##" onclick = "window.open('/support/FirstLogin.html','FirstLogin','toolbar=no,location=no,directorybuttons=no,scrollbars=yes,width=800,height=500,top=10,left=10')"
-							 onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image23','','/support/images/b_first_log_f2.gif',1)"><img id="Image23" src="/support/images/b_first_log.gif" class="cmWidth160 cmHeight25" alt="���߂ă��O�C���������"></a><br>
+							 onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image23','','/support/images/b_first_log_f2.gif',1)"><img id="Image23" src="/support/images/b_first_log.gif" class="cmWidth160 cmHeight25" alt="初めてログインする方へ"></a><br>
 							<img src="/images/shim.gif" class="cmHeight10 cmWidth01" alt=""><br>
 							<a href="##" onClick = "window.open('/support/C_001.html','C_001','toolbar=no,location=no,directorybuttons=no,scrollbars=yes,width=800,height=500,top=10,left=10')"
-							 onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image37','','/support/images/b_not_login_f2.gif',1)"><img id="Image37" src="/support/images/b_not_login.gif" class="cmWidth160 cmHeight25" alt="���O�C���ł��Ȃ�����"></a><br>
+							 onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image37','','/support/images/b_not_login_f2.gif',1)"><img id="Image37" src="/support/images/b_not_login.gif" class="cmWidth160 cmHeight25" alt="ログインできない時は"></a><br>
 							<img src="/images/shim.gif" class="cmHeight10 cmWidth01" alt=""><br>
 							
 							<a href="##" onClick = "window.open('https://faq.e-staffing.co.jp','cFAQ','toolbar=no,location=no,directorybuttons=no,scrollbars=yes,resizable=yes,width=1000,height=700,top=10,left=10')"
-							 onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image36','','/support/images/b_faq_f2.gif',1)"><img id="Image36" src="/support/images/b_faq.gif" class="cmWidth160 cmHeight25" alt="���̑���FAQ"></a><br>
+							 onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image36','','/support/images/b_faq_f2.gif',1)"><img id="Image36" src="/support/images/b_faq.gif" class="cmWidth160 cmHeight25" alt="その他のFAQ"></a><br>
 							<img src="/images/shim.gif" class="cmHeight10 cmWidth01" alt=""><br>
 							<a href="#" onclick = "window.open('https://www.e-staffing.co.jp/e-sta_motoANDsaki.html','WebManual_select')"
-							 onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image25','','/support/images/b_manual2_f2.gif',1)"><img id="Image25" src="/support/images/b_manual2.gif" class="cmWidth160 cmHeight27" alt="Web�}�j���A��"></a><br>
+							 onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image25','','/support/images/b_manual2_f2.gif',1)"><img id="Image25" src="/support/images/b_manual2.gif" class="cmWidth160 cmHeight27" alt="Webマニュアル"></a><br>
  							
 
-							<!--------------------�x���T�C���F��Flash---------------------->
+							<!--------------------ベリサイン認証Flash---------------------->
 							<img src="/images/shim.gif" class="cmHeight20 cmWidth01" alt=""><br>
 							<script src=https://seal.verisign.com/getseal?host_name=www2.e-staffing.ne.jp&size=S&use_flash=YES&use_transparent=YES&lang=ja></script>
 							<img src="/images/shim.gif" class="cmHeight20 cmWidth01" alt=""><br><br>
 
 							
 <!--##BANNER-START##-->
-							<a href="/support/index.html" target="_blank"><img src="/images/disasterBanner.jpg" class="cmWidth190 cmHeight50" alt="�ЊQ����p�T�C�g"></a><br>
+							<a href="/support/index.html" target="_blank"><img src="/images/disasterBanner.jpg" class="cmWidth190 cmHeight50" alt="災害時専用サイト"></a><br>
 								<img src="/images/shim.gif" class="cmWidth01 cmHeight10" alt=""><br>
 <!--##BANNER-END##-->
 							
 							<a href=javascript:loginInfo2('https://www.e-staffing.co.jp/dl/InformationSecurity.pdf')
-							 onMouseOut="func_swapImgRestore()" onMouseOver="func_swapImage('Image_n_02','','/images/b_security_f2.gif',1)"><img id="Image_n_02" src="/images/b_security.gif" class="cmWidth190 cmHeight25" alt="���Z�L�����e�B��{���j"></a><br>
+							 onMouseOut="func_swapImgRestore()" onMouseOver="func_swapImage('Image_n_02','','/images/b_security_f2.gif',1)"><img id="Image_n_02" src="/images/b_security.gif" class="cmWidth190 cmHeight25" alt="情報セキュリティ基本方針"></a><br>
 								<img src="/images/shim.gif" class="cmHeight10 cmWidth01" alt=""><br>
-							<a href=javascript:loginInfo2('/support/ReleaseNote/e-staffingServiceLevel.pdf') onMouseOut="func_swapImgRestore()" onMouseOver="func_swapImage('Image_n_01','','/images/b_estaffing_f2.gif',1)"><img id="Image_n_01" src="/images/b_estaffing.gif" class="cmWidth190 cmHeight25" alt="e-staffing �T�[�r�X���x��"></a><br>
+							<a href=javascript:loginInfo2('/support/ReleaseNote/e-staffingServiceLevel.pdf') onMouseOut="func_swapImgRestore()" onMouseOver="func_swapImage('Image_n_01','','/images/b_estaffing_f2.gif',1)"><img id="Image_n_01" src="/images/b_estaffing.gif" class="cmWidth190 cmHeight25" alt="e-staffing サービスレベル"></a><br>
 								<img src="/images/shim.gif" class="cmHeight10 cmWidth01" alt=""><br>
-							<a href=javascript:loginInfo2('/support/ReleaseNote/ServiceManagement.pdf') onMouseOut="func_swapImgRestore()" onMouseOver="func_swapImage('Image_n_03','','/images/b_service_f2.gif',1)"><img id="Image_n_03" src="/images/b_service.gif" class="cmWidth190 cmHeight25" alt="�T�[�r�X�}�l�W�����g���j"></a><br>
+							<a href=javascript:loginInfo2('/support/ReleaseNote/ServiceManagement.pdf') onMouseOut="func_swapImgRestore()" onMouseOver="func_swapImage('Image_n_03','','/images/b_service_f2.gif',1)"><img id="Image_n_03" src="/images/b_service.gif" class="cmWidth190 cmHeight25" alt="サービスマネジメント方針"></a><br>
 								<img src="/images/shim.gif" class="cmHeight10 cmWidth01" alt=""><br>
-							<a href=javascript:loginInfo2('https://www.e-staffing.co.jp/dl/protect.pdf') onMouseOut="func_swapImgRestore()" onMouseOver="func_swapImage('Image29','','/images/b_per_info_f2.gif',1)"><img id="Image29" src="/images/b_per_info.gif" class="cmWidth190 cmHeight25" alt="�l���ی���j�ɂ���"></a><br>
-								<img src="/images/shim.gif" class="cmHeight10 cmWidth01" alt=""><br>
-							
-							<a href=javascript:loginInfo2('https://www.e-staffing.co.jp/dl/BusinessContinuity.pdf') onMouseOut="func_swapImgRestore()" onMouseOver="func_swapImage('Image32','','/images/b_bussiness_continuity_f2.gif',1)"><img id="Image32" src="/images/b_bussiness_continuity.gif" class="cmWidth190 cmHeight25" alt="���ƌp����{���j"></a><br>
-								<img src="/images/shim.gif" class="cmHeight10 cmWidth01" alt=""><br>
-							<a href=javascript:loginInfo2('/support/e-staffing_missionStatement.pdf') onMouseOut="func_swapImgRestore()" onMouseOver="func_swapImage('Image33','','/images/b_mission_statement_f2.gif',1)"><img id="Image33" src="/images/b_mission_statement.gif" class="cmWidth190 cmHeight25" alt="�T�|�[�g�Z���^�[��{���j"></a><br>
+							<a href=javascript:loginInfo2('https://www.e-staffing.co.jp/dl/protect.pdf') onMouseOut="func_swapImgRestore()" onMouseOver="func_swapImage('Image29','','/images/b_per_info_f2.gif',1)"><img id="Image29" src="/images/b_per_info.gif" class="cmWidth190 cmHeight25" alt="個人情報保護方針について"></a><br>
 								<img src="/images/shim.gif" class="cmHeight10 cmWidth01" alt=""><br>
 							
-							<a href=javascript:loginInfo2('/support/e-staffing_needstouse.pdf') onMouseOut="func_swapImgRestore()" onMouseOver="func_swapImage('Image31','','/images/b_computer_f2.gif',1)"><img id="Image31" src="/images/b_computer.gif" class="cmWidth190 cmHeight25" alt="����m�F�ς݊�"></a>
+							<a href=javascript:loginInfo2('https://www.e-staffing.co.jp/dl/BusinessContinuity.pdf') onMouseOut="func_swapImgRestore()" onMouseOver="func_swapImage('Image32','','/images/b_bussiness_continuity_f2.gif',1)"><img id="Image32" src="/images/b_bussiness_continuity.gif" class="cmWidth190 cmHeight25" alt="事業継続基本方針"></a><br>
+								<img src="/images/shim.gif" class="cmHeight10 cmWidth01" alt=""><br>
+							<a href=javascript:loginInfo2('/support/e-staffing_missionStatement.pdf') onMouseOut="func_swapImgRestore()" onMouseOver="func_swapImage('Image33','','/images/b_mission_statement_f2.gif',1)"><img id="Image33" src="/images/b_mission_statement.gif" class="cmWidth190 cmHeight25" alt="サポートセンター基本方針"></a><br>
+								<img src="/images/shim.gif" class="cmHeight10 cmWidth01" alt=""><br>
+							
+							<a href=javascript:loginInfo2('/support/e-staffing_needstouse.pdf') onMouseOut="func_swapImgRestore()" onMouseOver="func_swapImage('Image31','','/images/b_computer_f2.gif',1)"><img id="Image31" src="/images/b_computer.gif" class="cmWidth190 cmHeight25" alt="動作確認済み環境"></a>
 						</td>
 						<td class="cmWidth20">&nbsp;</td>
 						<td class="cmWidth500">
@@ -497,7 +447,7 @@
 
 
 	
-							<!------------------�悭���邲���₩���Q���܂ł��P��HTML�Ƃ��ĊO�����ɂ���B------------------>
+							<!------------------よくあるご質問から障害情報までを１つのHTMLとして外だしにする。------------------>
 
 							
 
@@ -661,7 +611,7 @@
 	
 		
 	
-		<!------------------�������e�i���X���------------------>
+		<!------------------↓メンテナンス情報↓------------------>
 	
 		<table class="spWidth500 spTable01">
 	
@@ -669,7 +619,7 @@
 	
 			<td class="spWidth500"> 
 	
-			<img src="/support/images/mid_obstacle_info.gif" class="spWidth500 spHeight27" alt="�����e�i���X���^Obstacle infomation"><br>
+			<img src="/support/images/mid_obstacle_info.gif" class="spWidth500 spHeight27" alt="メンテナンス情報／Obstacle infomation"><br>
 	
 			<tr>
 	
@@ -685,9 +635,9 @@
 	
 			<div class="lh12">
 	
-			�@<b>2018�N8����������e�i���X�\��F 2018/8/12�i���j �\��</b><br>
+			　<b>2018年8月定期メンテナンス予定： 2018/8/12（日） 予定</b><br>
 	
-			�@2018�N9����������e�i���X�\��F 2018/9/9�i���j �\��<br>
+			　2018年9月定期メンテナンス予定： 2018/9/9（日） 予定<br>
 	
 			</div>
 	
@@ -701,13 +651,13 @@
 	
 		<img src="/support/images/shim.gif" class="spWidth01 spHeight04" alt=""><br>
 	
-		<!------------------�������e�i���X���------------------>
+		<!------------------↑メンテナンス情報↑------------------>
 	
 		
 	
-		<!------------------�����m�点��------------------>
+		<!------------------↓お知らせ↓------------------>
 	
-		<img src="/support/images/mid_news.gif" class="spWidth500 spHeight27" alt="���m�点�^News"><br>
+		<img src="/support/images/mid_news.gif" class="spWidth500 spHeight27" alt="お知らせ／News"><br>
 	
 		<table class="spWidth500 spTable01">
 	
@@ -719,7 +669,7 @@
 	
 		
 	
-		<!-- �����m�点�ҏW���� -���E�����Ȃ�-�� -->
+		<!-- ↓お知らせ編集部分 -左右分割なし-↓ -->
 	
 		
 	
@@ -729,263 +679,263 @@
 	
 						<div class="lh12">
 	
-							<b>�@2018/7/27 01:30 <span class="spColorRed">NEW</span></b><br>
+							<b>　2018/7/27 01:30 <span class="spColorRed">NEW</span></b><br>
 	
-								�@<b>�h����Ǘ��䒠�ꕔ�s��C�������̂���</b><br>
+								　<b>派遣先管理台帳一部不具合修正完了のご報告</b><br>
 	
-								�@<br>
+								　<br>
 	
-								�@�h����Ǘ��䒠�̈ꕔ�Ŕ������Ă����s��ɂ��܂��āA<br>
+								　派遣先管理台帳の一部で発生していた不具合につきまして、<br>
 	
-								�@�s��̏C���Ɣh����Ǘ��䒠�̍č쐬�������v���܂����B<br>
+								　不具合の修正と派遣先管理台帳の再作成が完了致しました。<br>
 	
-								�@<br>
+								　<br>
 	
-								�@���̓x�͂����f�����|�����܂��āA���ɐ\���󂲂����܂���B <br>
-	
-						</div>&nbsp;
-	
-						<div class="lh12">
-	
-							<b>�@2018/7/26 16:30</b><br>
-	
-							<b>�@2018/7/25 22:00</b><br>
-	
-								�@<b>�h����Ǘ��䒠�ꕔ�s������̂��� ����</b><br>
-	
-								�@<br>
-	
-								�@�y�s��̏C���ɂ��āz<br>
-	
-								�@7/25(��) 23������s����C���v���܂��B<br>
-	
-								�@7/26(��)�ȍ~�ɒ��[���쐬�܂��͍X�V�����ꍇ�A<br>
-	
-								�@�u60�Έȏ�ɊY������҂��ۂ��̕ʁv�̍��ڕ\�����������\������܂��B <br>
-	
-								�@<br>
-	
-								�@�y���[�č쐬�ɂ��āz<br>
-	
-								�@7/26(��) �[�邩��h����Ǘ��䒠�̍č쐬��v���܂��B<br>
-	
-								�@7/26(��) 23�����_�ŁA�������\������Ă��Ȃ��h����Ǘ��䒠�ɂ��܂��āA<br>
-	
-								�@�������\�������悤�ɑΉ��v���܂��B<br>
-	
-								�@<br>
-	
-								�@���̓x�͂����f�����|�����܂��āA���ɐ\���󂲂����܂���B<br>
+								　この度はご迷惑をお掛けしまして、誠に申し訳ございません。 <br>
 	
 						</div>&nbsp;
 	
 						<div class="lh12">
 	
-							<b>�@2018/7/24 16:45</b><br>
+							<b>　2018/7/26 16:30</b><br>
 	
-								�@<b>�h����Ǘ��䒠�ꕔ�s������̂���</b><br>
+							<b>　2018/7/25 22:00</b><br>
 	
-								�@<br>
+								　<b>派遣先管理台帳一部不具合発生のご報告 続報</b><br>
 	
-								�@�y�s����ہz<br>
+								　<br>
 	
-								�@2018/06/10�ȍ~�ɃX�^�b�t�l�̔N�60�Έȏ�ō쐬���ꂽ<br>
+								　【不具合の修正について】<br>
 	
-								�@�h����Ǘ��䒠�̈ꕔ�ŕs����������Ă���܂��B<br>
+								　7/25(水) 23時から不具合を修正致します。<br>
 	
-								�@<br>
+								　7/26(木)以降に帳票を作成または更新した場合、<br>
 	
-								�@�y��̓I�ȕs��̓��e�z<br>
+								　「60歳以上に該当する者か否かの別」の項目表示が正しく表示されます。 <br>
 	
-								�@�h����Ǘ��䒠�ɕ\�������u60�Έȏ�ɊY������҂��ۂ��̕ʁv�̍��ڕ\�����A<br>
+								　<br>
 	
-								�@60�Έȏ�̃X�^�b�t�l�̏ꍇ�ɂ����āA60�Ζ����ƌ���ĕ\������Ă��܂��B<br>
+								　【帳票再作成について】<br>
 	
-								�@<br>
+								　7/26(木) 深夜から派遣先管理台帳の再作成を致します。<br>
 	
-								�@�y�Ή����e�z<br>
+								　7/26(木) 23時時点で、正しく表示されていない派遣先管理台帳につきまして、<br>
 	
-								�@����č쐬���ꂽ�h����Ǘ��䒠�ɂ��āA<br>
+								　正しく表示されるように対応致します。<br>
 	
-								�@�������\�������悤�ɔh����Ǘ��䒠�̍č쐬��v���܂��B<br>
+								　<br>
 	
-								�@�č쐬�̑Ή����ɂ��܂��ẮA���肵������߂ă��O�C����ʂɌf�ڒv���܂��B<br>
+								　この度はご迷惑をお掛けしまして、誠に申し訳ございません。<br>
 	
-								�@<br>
+						</div>&nbsp;
 	
-								�@���̓x�͂����f�����|�����܂��āA���ɐ\���󂲂����܂���B<br>
+						<div class="lh12">
+	
+							<b>　2018/7/24 16:45</b><br>
+	
+								　<b>派遣先管理台帳一部不具合発生のご報告</b><br>
+	
+								　<br>
+	
+								　【不具合事象】<br>
+	
+								　2018/06/10以降にスタッフ様の年齢が60歳以上で作成された<br>
+	
+								　派遣先管理台帳の一部で不具合が発生しております。<br>
+	
+								　<br>
+	
+								　【具体的な不具合の内容】<br>
+	
+								　派遣先管理台帳に表示される「60歳以上に該当する者か否かの別」の項目表示が、<br>
+	
+								　60歳以上のスタッフ様の場合において、60歳未満と誤って表示されています。<br>
+	
+								　<br>
+	
+								　【対応内容】<br>
+	
+								　誤って作成された派遣先管理台帳について、<br>
+	
+								　正しく表示されるように派遣先管理台帳の再作成を致します。<br>
+	
+								　再作成の対応日につきましては、決定し次第改めてログイン画面に掲載致します。<br>
+	
+								　<br>
+	
+								　この度はご迷惑をお掛けしまして、誠に申し訳ございません。<br>
 	
 						</div>&nbsp;
 	
 						<!--<div class="lh12">
 	
-							<b>�@2018/6/18 11:30�X�V</b><br>
+							<b>　2018/6/18 11:30更新</b><br>
 	
-							<font color="red"><b>�@�y���������z</b></font><br>
+							<font color="red"><b>　【復旧完了】</b></font><br>
 	
-							�@�T�|�[�g�Z���^�[����̃��[�����M�ɂ��āA��Q�����������܂����̂ŁA<br>
+							　サポートセンターからのメール発信について、障害復旧いたしましたので、<br>
 	
-							�@���񍐂������܂��B<br>
+							　ご報告いたします。<br>
 	
-							�@���̓x�́A�����f�����������܂��Đ��ɐ\���󂠂�܂���ł����B<br>
+							　この度は、ご迷惑をおかけしまして誠に申し訳ありませんでした。<br>
 	
-							<b>�@2018/6/18 11:00</b><br>
+							<b>　2018/6/18 11:00</b><br>
 	
-								<b>�@�T�|�[�g�Z���^�[����̃��[�����M�ɂ���</b><br>
+								<b>　サポートセンターからのメール発信について</b><br>
 	
-								�@���݁A�F�l��肨���肢�����������[���͖��Ȃ���M���Ă���܂����A<br>
+								　現在、皆様よりお送りいただいたメールは問題なく受信しておりますが、<br>
 	
-								�@�T�|�[�g�Z���^�[�̃��[�����M���̏�Q�ɂ��A���ԐM�𔭐M�ł��Ȃ��󋵂ɂ���܂��B<br>
+								　サポートセンターのメール送信環境の障害により、ご返信を発信できない状況にあります。<br>
 	
-								�@���V�X�e������̃��[�����M�ɂ́A���͔������Ă���܂���B<br>
+								　※システムからのメール発信には、問題は発生しておりません。<br>
 	
-								�@<br>
+								　<br>
 	
-								�@���[���ł̂��ԐM�́A��Q������ƂȂ�܂����߁A<br>
+								　メールでのご返信は、障害復旧後となりますため、<br>
 	
-								�@��M���܂������[���ɂ��A����d�b�ԍ��̋L�ڂ�����ہA<br>
+								　受信しましたメールにご連絡先電話番号の記載がある際、<br>
 	
-								�@���d�b�ɂĂ��₢���킹�̉񓚂������s�킹�Ă��������܂��B<br>
+								　お電話にてお問い合わせの回答を順次行わせていただきます。<br>
 	
-								�@���A����d�b�ԍ��̋L�ڂ��Ȃ��ہA���[���̕�������A���A�������Ă��������܂��B<br>
+								　ご連絡先電話番号の記載がない際、メールの復旧次第、ご連絡させていただきます。<br>
 	
-								�@���̓x�́A�����f�����������܂��Đ��ɐ\���󂠂�܂���B<br>
+								　この度は、ご迷惑をおかけしまして誠に申し訳ありません。<br>
 	
 						</div>&nbsp;-->
 	
 						<div class="lh12">
 	
-							<b>�@2018/7/19 19:00</b><br>
+							<b>　2018/7/19 19:00</b><br>
 	
-								�@�y2018/7/19�����[�X�z<br>
+								　【2018/7/19リリース】<br>
 	
-								�@ �y�h������Ɨl�z<br>
+								　 【派遣元企業様】<br>
 	
-								�@�E���������J�n���[���̋L�ڍ��ڒǉ�<br>
-	
-								<br>
-	
-								�@ �y�h����E�h������Ɨl�z<br>
-	
-								�@�E�ڑ��ݒ芮�����[���̋L�ڍ��ڒǉ�<br>
+								　・導入準備開始メールの記載項目追加<br>
 	
 								<br>
 	
-								�@�ڍׂ͉��L�����N��育�m�F���������B<br>
+								　 【派遣先・派遣元企業様】<br>
 	
-								�@<a href="https://www2.e-staffing.ne.jp/support/ReleaseNote/e-staffing_ReleaseInfo20180719.pdf" target="_blank">2018�N7��19���郊���[�X�m�[�g�i�S3�y�[�W�j</a><br>
+								　・接続設定完了メールの記載項目追加<br>
+	
+								<br>
+	
+								　詳細は下記リンクよりご確認ください。<br>
+	
+								　<a href="https://www2.e-staffing.ne.jp/support/ReleaseNote/e-staffing_ReleaseInfo20180719.pdf" target="_blank">2018年7月19日夜リリースノート（全3ページ）</a><br>
 	
 						</div>&nbsp;
 	
 						<div class="lh12">
 	
-							<b>�@2018/6/13 21:30</b><br>
+							<b>　2018/6/13 21:30</b><br>
 	
-								�@<B>�A�[�J�C�u�t�@�C���̓W�J�����ɂ�����Ǝ㐫�uZip Slip�v�ɂ���</B><br>
+								　<B>アーカイブファイルの展開処理における脆弱性「Zip Slip」について</B><br>
 	
-								�@e-staffing�V�X�e���ł́A<font color="green"><B>�{�Ǝ㐫�̑΍�͊������Ă���A�e�����󂯂Ȃ�</B></font>���Ƃ�<br>
+								　e-staffingシステムでは、<font color="green"><B>本脆弱性の対策は完了しており、影響を受けない</B></font>ことを<br>
 	
-								�@�m�F���Ă���܂��B<br>
+								　確認しております。<br>
 	
-								�@�ǂ������S���ăV�X�e���������p���������B<br>
+								　どうぞ安心してシステムをご利用ください。<br>
 	
 						</div>&nbsp;
 	
 						<div class="lh12">
 	
-							<b>�@2018/6/1 20:00</b><br>
+							<b>　2018/6/1 20:00</b><br>
 	
-								�@�y�S���[�U�l���� 2018/6/10�����[�X�z<br>
+								　【全ユーザ様向け 2018/6/10リリース】<br>
 	
-								�@�E�h����ʒm���̔N��敪�\�L�ύX<br>
+								　・派遣先通知書の年齢区分表記変更<br>
 	
-								�@�E�Љ�\��h���_��̋��l�[���ڂɁu���ԊO�����v���ڒǉ�<br>
+								　・紹介予定派遣契約の求人票項目に「時間外割増」項目追加<br>
 	
-								�@�E�Љ�\��h���_��̋��l�[���ځu�\������v�̏���l��K�{����C�ӓ��͂֕ύX<br>
+								　・紹介予定派遣契約の求人票項目「予定賃金」の上限値を必須から任意入力へ変更<br>
 	
-								�@�E�Љ�\��h���_��̋��l�[���ځu�A�Ə����v�̔��l���ɁA<br>
+								　・紹介予定派遣契約の求人票項目「就業条件」の備考欄に、<br>
 	
-								�@�@�ٗʘJ�����Ɋւ���L�ڂ𑣂��K�C�_���X��ǉ�<br>
+								　　裁量労働制に関する記載を促すガイダンスを追加<br>
 	
-								�@�E�ٗp�ی� �����ΏۊO���R�u�N��ΏۊO�v�̑I�����폜<br>
+								　・雇用保険 加入対象外理由「年齢対象外」の選択肢削除<br>
 	
-								�@�E���Ə��P�ʒ�G���̒ʒm�󋵂̕\���ǉ�<br>
-	
-								<br>
-	
-								�@�y�h����l���� 2018/6/10�����[�X�z<br>
-	
-								�@�E���Ə��P�ʒ�G���ʒm�󋵂̃_�E�����[�h�@�\�ǉ�<br>
-	
-								�@�E���Ə��P�ʒ�G���ʒm��PDF�̃_�E�����[�h�@�\�ǉ�<br>
-	
-								�@�E�ΑӃA�b�v���[�h�Ɏ捞�X�e�[�^�X�̑I�����ǉ�<br>
+								　・事業所単位抵触日の通知状況の表示追加<br>
 	
 								<br>
 	
-								�@�y�h�����l���� 2018/6/10�����[�X�z<br>
+								　【派遣先様向け 2018/6/10リリース】<br>
 	
-								�@�E���Ə��P�ʒ�G���̒ʒm��̏󋵂̃_�E�����[�h�@�\�ǉ�<br>
+								　・事業所単位抵触日通知状況のダウンロード機能追加<br>
 	
-								�@�E�X�^�b�t���}�X�L���O�@�\�̑Ώی�����ǉ�<br>
+								　・事業所単位抵触日通知書PDFのダウンロード機能追加<br>
+	
+								　・勤怠アップロードに取込ステータスの選択肢追加<br>
 	
 								<br>
 	
-								�@�ڍׂ͉��L�����N��育�m�F���������B<br>
+								　【派遣元様向け 2018/6/10リリース】<br>
 	
-								�@<a href="https://www2.e-staffing.ne.jp/support/ReleaseNote/e-staffing_ReleaseInfo20180610.pdf" target="_blank">2018�N6�������[�X�m�[�g�i�S19�y�[�W�j</a><br>
+								　・事業所単位抵触日の通知受領状況のダウンロード機能追加<br>
+	
+								　・スタッフ名マスキング機能の対象権限を追加<br>
+	
+								<br>
+	
+								　詳細は下記リンクよりご確認ください。<br>
+	
+								　<a href="https://www2.e-staffing.ne.jp/support/ReleaseNote/e-staffing_ReleaseInfo20180610.pdf" target="_blank">2018年6月リリースノート（全19ページ）</a><br>
 	
 						</div>&nbsp;
 	
 						<!--<div class="lh12">
 	
-							<b>�@2018/5/22 19:00</b><br>
+							<b>　2018/5/22 19:00</b><br>
 	
-								�@�{���A16:56�`17:08�̊ԁA�ꕔ���[�U�l�ɂ����܂��āA<br>
+								　本日、16:56～17:08の間、一部ユーザ様におきまして、<br>
 	
-								�@���[PDF�̃_�E�����[�h�Ɏ��s���鎖�ۂ��m�F�ł��܂����B<br>
+								　帳票PDFのダウンロードに失敗する事象が確認できました。<br>
 	
-								�@17:08�ȍ~�̓G���[�̔����͂������܂���B<br>
+								　17:08以降はエラーの発生はございません。<br>
 	
-								�@�{���ۂɊY�����ꂽ���́A<br>
+								　本事象に該当された方は、<br>
 	
-								�@��ς��萔�ł����A�ēx�_�E�����[�h�����{�����܂��悤���肢�������܂��B<br>
+								　大変お手数ですが、再度ダウンロードを実施頂きますようお願いいたします。<br>
 	
-								�@������ǋ��̏�A�Ĕ��h�~�ɓw�߂܂��B<br>
+								　原因を追究の上、再発防止に努めます。<br>
 	
-								�@���̓x�͐��ɐ\���󂲂����܂���ł����B<br>
+								　この度は誠に申し訳ございませんでした。<br>
 	
 						</div>&nbsp;
 	
 						<div class="lh12">
 	
-							<b>�@2018/4/23 19:00</b><br>
+							<b>　2018/4/23 19:00</b><br>
 	
-								<b>�@�y���[���쐬�Ɋւ��鎖�ۉ����̂��񍐁z</b><br>
-	
-								<br>
-	
-								�@�y�h����E�h������Ɨl�z<br>
-	
-								�@4/23�@17:00�ɂ��񍐂��Ă���܂������[���쐬�̎��ۂ��������Ă��錏�ɂ��āA<br>
-	
-								�@18:40�Ɏ��ۉ����y�сA���쐬�ƂȂ��Ă����Ώے��[�̍쐬�������������܂����̂ŁA<br>
-	
-								�@���񍐂������܂��B <br>
-	
-								�@<br>
-	
-								�@�y�Ώے��[�z<br>
-	
-								�@�{���i4/23�j�V�X�e�����p�J�n���� �`09:15�܂ł̊Ԃ�<br>
-	
-								�@�_��쐬�E�m�肵���ʘJ���Ҕh���_�񏑁E�h����ʒm���^�h����Ǘ��䒠�A<br>
-	
-								�@��ʏ�������́A�A�b�v���[�h�̕��@�ō쐬����������<br>
+								<b>　【帳票未作成に関する事象解消のご報告】</b><br>
 	
 								<br>
 	
-								�@���̓x�́A�����f�����������܂��Đ\���󂠂�܂���B<br>
+								　【派遣先・派遣元企業様】<br>
+	
+								　4/23　17:00にご報告しておりました帳票未作成の事象が発生している件について、<br>
+	
+								　18:40に事象解消及び、未作成となっていた対象帳票の作成が完了いたしましたので、<br>
+	
+								　ご報告いたします。 <br>
+	
+								　<br>
+	
+								　【対象帳票】<br>
+	
+								　本日（4/23）システム利用開始時刻 ～09:15までの間に<br>
+	
+								　契約作成・確定した個別労働者派遣契約書・派遣先通知書／派遣先管理台帳、<br>
+	
+								　画面上もしくは、アップロードの方法で作成した請求書<br>
+	
+								<br>
+	
+								　この度は、ご迷惑をおかけしまして申し訳ありません。<br>
 	
 						</div>&nbsp;-->
 	
@@ -993,19 +943,19 @@
 	
 						<div class="lh12">
 	
-							<b>�@2018/3/26 21:00</b><br>
+							<b>　2018/3/26 21:00</b><br>
 	
-								�@�y2018/3/26�����[�X�z<br>
+								　【2018/3/26リリース】<br>
 	
-								�@�y�S���[�U�l�����z<br>
+								　【全ユーザ様向け】<br>
 	
-								�@FAQ�T�C�g�I�[�v���̂��m�点<br>
+								　FAQサイトオープンのお知らせ<br>
 	
-								�@e-staffing�EWebTimeCard�̑���ł��s���ȏꍇ�ɂ����p���������A<br>
+								　e-staffing・WebTimeCardの操作でご不明な場合にご利用いただく、<br>
 	
-								�@FAQ�T�C�g��V���ɃI�[�v�����܂����B���ЁA�����p���������B<br>
+								　FAQサイトを新たにオープンしました。ぜひ、ご利用ください。<br>
 	
-								�@<a href="https://faq.e-staffing.co.jp" onclick= "window.open(this.href,'','width=1000,height=700,scrollbars=yes,resizable=yes,top=10,left=10');return false;">FAQ�T�C�g�͂�����</a><br>
+								　<a href="https://faq.e-staffing.co.jp" onclick= "window.open(this.href,'','width=1000,height=700,scrollbars=yes,resizable=yes,top=10,left=10');return false;">FAQサイトはこちら</a><br>
 	
 						</div>&nbsp;
 	
@@ -1013,41 +963,41 @@
 	
 						<div class="lh12">
 	
-		                    <b>�@2018/3/2 19:00</b><br>
+		                    <b>　2018/3/2 19:00</b><br>
 	
-		                                            �@�y2018/3/11�����[�X�z<br>
+		                                            　【2018/3/11リリース】<br>
 	
-		                                            �@�y�h����E�h������Ɨl�z<br>
+		                                            　【派遣先・派遣元企業様】<br>
 	
-		                                            �@�E�����f�[�^���쐬�̌_��i�������_��j�����@�\�V��<br>
+		                                            　・請求データ未作成の契約（未請求契約）検索機能新設<br>
 	
-		                                            �@<br>
+		                                            　<br>
 	
-		                                            �@�y�h�����Ɨl�̂݁z<br>
+		                                            　【派遣先企業様のみ】<br>
 	
-		                                            �@�E���X�����F�^���X���\���A���[���@�\�V��<br>
+		                                            　・日々未承認／日々未申請アラーム機能新設<br>
 	
-		                                            �@<br>
+		                                            　<br>
 	
-		                                            �@�y�h������Ɨl�̂݁z<br>
+		                                            　【派遣元企業様のみ】<br>
 	
-		                                            �@�E���[�U�̎��s���[���ǉ��y�ь������̕ύX<br>
+		                                            　・ユーザの実行ロール追加及び権限名称変更<br>
 	
-		                                            �@�E�_��㗝�����@�\�V��<br>
+		                                            　・契約代理処理機能新設<br>
 	
-		                                            �@�E�X�^�b�t���}�X�L���O�@�\�V��<br>
+		                                            　・スタッフ名マスキング機能新設<br>
 	
-		                                            �@�E�_���o�O�̒��[�m�F�@�\�V��<br>
+		                                            　・契約提出前の帳票確認機能新設<br>
 	
-		                                            �@�E���[�������ǉ��Ή�<br>
+		                                            　・メール件名追加対応<br>
 	
-		                                            �@�E���[���ʒm��J�X�^�}�C�Y�@�\�ǉ�<br>
+		                                            　・メール通知先カスタマイズ機能追加<br>
 	
-		                                            �@<br>
+		                                            　<br>
 	
-		                                            �@�ڍׂ͉��L�����N��育�m�F���������B<br>
+		                                            　詳細は下記リンクよりご確認ください。<br>
 	
-		                                            �@<a href="https://www2.e-staffing.ne.jp/support/ReleaseNote/e-staffing_ReleaseInfo20180311.pdf" target="_blank">2018�N3�������[�X�m�[�g�i�S22�y�[�W�j</a><br>
+		                                            　<a href="https://www2.e-staffing.ne.jp/support/ReleaseNote/e-staffing_ReleaseInfo20180311.pdf" target="_blank">2018年3月リリースノート（全22ページ）</a><br>
 	
 		                                            &nbsp;
 	
@@ -1061,55 +1011,55 @@
 	
 						<div class="lh12">
 	
-							<b>�@2018/02/12 00:00 �X�V</b><br>
+							<b>　2018/02/12 00:00 更新</b><br>
 	
-							<b>�@2017/11/16 19:30 �X�V</b><br>
+							<b>　2017/11/16 19:30 更新</b><br>
 	
-							<b>�@2017/11/12 10:00</b><br>
+							<b>　2017/11/12 10:00</b><br>
 	
-								�@�y�S���[�U�l���� 2018/2/11�z<br>
+								　【全ユーザ様向け 2018/2/11】<br>
 	
-								<span class="spColorRed"><b>�@����m�F�Ώۃu���E�U�̕ύX�ɂ���</b></span><br><br>
+								<span class="spColorRed"><b>　動作確認対象ブラウザの変更について</b></span><br><br>
 	
-								�@<a href="javascript:loginInfo2('/support/e-staffing_needstouse.pdf')">����m�F�ς݃u���E�U</a>�́A���L�ɕύX�ɂȂ�܂����B<br>
+								　<a href="javascript:loginInfo2('/support/e-staffing_needstouse.pdf')">動作確認済みブラウザ</a>は、下記に変更になりました。<br>
 	
-				                 <b>�@Microsoft Internet Explorer 11</b>�i<span class="spUnderline">�݊��\�����[�h�̗��p�Ȃ�</span>�j<br>
+				                 <b>　Microsoft Internet Explorer 11</b>（<span class="spUnderline">互換表示モードの利用なし</span>）<br>
 	
-					             <b>�@Microsoft Edge</b><br>
+					             <b>　Microsoft Edge</b><br>
 	
-					             <b>�@Google Chrome</b><br>
+					             <b>　Google Chrome</b><br>
 	
-					             <b>�@Mozilla Firefox</b><br>
+					             <b>　Mozilla Firefox</b><br>
 	
-					             <b>�@Safari</b><br><br>
+					             <b>　Safari</b><br><br>
 	
-					             <b>�@Internet Explorer 11</b>���O�̃o�[�W�����iIE7.8.9.10�j�������p���̏ꍇ�́A<br>
+					             <b>　Internet Explorer 11</b>より前のバージョン（IE7.8.9.10）をご利用中の場合は、<br>
 	
-					                        �@���O�C����ʂɂāuWeb�y�[�W����̃��b�Z�[�W�v��<br>
+					                        　ログイン画面にて「Webページからのメッセージ」で<br>
 	
-					                        �@����m�F�ςł͂Ȃ�������̂����p�ƕ\�������Ă��������܂��B<br>
+					                        　動作確認済ではない環境からのご利用と表示させていただきます。<br>
 	
-		                        �@IE11�ւ̃A�b�v�O���[�h���܂߂āA�Ή������������������B<br>
+		                        　IE11へのアップグレードも含めて、対応をご検討ください。<br>
 	
-		                                                    �@��IE�̃o�[�W�����́A�u���ԃ{�^���v��������<br>
+		                                                    　※IEのバージョンは、「歯車ボタン」もしくは<br>
 	
-		                                                      �@  �u�w���v�v���u�o�[�W�������v�ł��m�F���������܂��B<br><br>
+		                                                      　  「ヘルプ」→「バージョン情報」でご確認いただけます。<br><br>
 	
 					             
 	
-								<b>�@��Internet Explorer 11</b> �ł́A<br>
+								<b>　※Internet Explorer 11</b> では、<br>
 	
-		                                                        �@�u�݊��\���v���[�h�A�������̓G���^�[�v���C�Y���[�h�iIE11�j���g�p���Ă̕\����<br>
+		                                                        　「互換表示」モード、もしくはエンタープライズモード（IE11）を使用しての表示は<br>
 	
-		                                                        �@����ۏ؊O�ɂȂ�܂��B<br>
+		                                                        　動作保証外になります。<br>
 	
-		                                                       �@�ύX�菇�́A<a href="https://www2.e-staffing.ne.jp/support/ReleaseNote/e-staffing_ReleaseInfo20180211.pdf" target="_blank">�����[�X�m�[�g</a>�����Q�Ƃ��������B<br><br>
+		                                                       　変更手順は、<a href="https://www2.e-staffing.ne.jp/support/ReleaseNote/e-staffing_ReleaseInfo20180211.pdf" target="_blank">リリースノート</a>をご参照ください。<br><br>
 	
-		                                                        �@������m�F�́A�e�u���E�U�̍ŐV�A�b�v�f�[�g�o�[�W�������g���čs���܂��B<br><br>
+		                                                        　※動作確認は、各ブラウザの最新アップデートバージョンを使って行います。<br><br>
 	
-		                                                        �@������m�F�ς݂ł͂Ȃ��u���E�U�𗘗p���ꂽ�ꍇ�A��ʃ��C�A�E�g�̕\�������A<br>
+		                                                        　※動作確認済みではないブラウザを利用された場合、画面レイアウトの表示崩れや、<br>
 	
-		                                                        �@���삪����ɍs���Ȃ��Ȃ�ꍇ������܂��̂ł����ӂ��������B<br><br>
+		                                                        　動作が正常に行われなくなる場合がありますのでご注意ください。<br><br>
 	
 					             
 	
@@ -1123,15 +1073,15 @@
 	
 		
 	
-		<!-- ���m�点�ꗗ 20110331// -->
+		<!-- お知らせ一覧 20110331// -->
 	
 		<tr><td class="spRight">
 	
-		     <a href="http://www.e-staffing.co.jp/info/information_template.html" target="_blank"><img src="/support/images/infoBtn.jpg" class="spWidth120 spHeight25 spNoBorder" alt="���m�点�ꗗ"></a>
+		     <a href="http://www.e-staffing.co.jp/info/information_template.html" target="_blank"><img src="/support/images/infoBtn.jpg" class="spWidth120 spHeight25 spNoBorder" alt="お知らせ一覧"></a>
 	
 		</td></tr>
 	
-		<!-- //���m�点�ꗗ 20110331 -->
+		<!-- //お知らせ一覧 20110331 -->
 	
 		
 	
@@ -1139,11 +1089,11 @@
 	
 						<div class="lh12">
 	
-							<b>�@2018/7/19 20:00</b><br>
+							<b>　2018/7/19 20:00</b><br>
 	
-								�@�y�S���[�U�l�����z<br>
+								　【全ユーザ様向け】<br>
 	
-								�@�@<a href="https://www2.e-staffing.ne.jp/support/ReleaseNote/ServiceReport_201806.pdf" target="_blank">2018�N6���x�T�[�r�X�񍐏�</a>���f�ڂ��܂����B<br>
+								　　<a href="https://www2.e-staffing.ne.jp/support/ReleaseNote/ServiceReport_201806.pdf" target="_blank">2018年6月度サービス報告書</a>を掲載しました。<br>
 	
 								&nbsp;
 	
@@ -1151,15 +1101,15 @@
 	
 			</td></tr>
 	
-		<!-- �T�[�r�X�񍐏��ꗗ 20130515// -->
+		<!-- サービス報告書一覧 20130515// -->
 	
 		<tr><td class="spRight">
 	
-		     <a href="http://www.e-staffing.co.jp/ServiceReport/service_template.html" target="_blank"><img src="/support/images/service_infoBtn.jpg" class="spWidth171 spHeight25 spNoBorder" alt="�T�[�r�X�񍐏��ꗗ"></a>
+		     <a href="http://www.e-staffing.co.jp/ServiceReport/service_template.html" target="_blank"><img src="/support/images/service_infoBtn.jpg" class="spWidth171 spHeight25 spNoBorder" alt="サービス報告書一覧"></a>
 	
 		</td></tr>
 	
-		<!-- //�T�[�r�X�񍐏��ꗗ 20130515 -->
+		<!-- //サービス報告書一覧 20130515 -->
 	
 		
 	
@@ -1167,13 +1117,13 @@
 	
 		<img src="/support/images/shim.gif" class="spWidth01 spHeight15" alt=""><br>
 	
-		<!------------------�����m�点��------------------>
+		<!------------------↑お知らせ↑------------------>
 	
 		
 	
 		
 	
-		<!------------------���悭���邲���⁫------------------>
+		<!------------------↓よくあるご質問↓------------------>
 	
 		<table>
 	
@@ -1181,7 +1131,7 @@
 	
 			<td class="spWidth500"> 
 	
-			<img src="/support/images/mid_faq.gif" class="spWidth500 spHeight27" alt="�悭���邲����^FAQ"><br>
+			<img src="/support/images/mid_faq.gif" class="spWidth500 spHeight27" alt="よくあるご質問／FAQ"><br>
 	
 			<table class="spWidth500 spTable01">
 	
@@ -1201,27 +1151,13 @@
 	
 			<td colspan="4" class="lh10">
 	
-				Q. �A�J�E���g�����b�N����Ă��܂��܂����B�ǂ�����΂����ł����H<br>
+				Q. アカウントがロックされてしまいました。どうすればいいですか？<br>
 	
-				A. ���O�C����ʂ́w�u�p�X���[�h��Y�ꂽ�v�܂��́u�A�J�E���g�����b�N���ꂽ�v�ɂ�胍�O�C���ł��Ȃ����͂�����x<br>
+				A. ログイン画面の『「パスワードを忘れた」または「アカウントがロックされた」によりログインできない方はこちら』<br>
 	
-				�@�@�̃����N����A�p�X���[�h�̏���������уA�J�E���g���b�N�������A�����g�ōs���Ă����������Ƃ��\�ł��B<br>
+				　　のリンクから、パスワードの初期化およびアカウントロック解除を、ご自身で行っていただくことが可能です。<br>
 	
-				�@�@<span class="spColorRed">�T�|�[�g�Z���^�[�ł̓��b�N�����͑Ή��v�����˂܂�</span>�̂ŁA�\�߂��������������܂��悤���肢�\���グ�܂��B<br><br>
-	
-			</td>
-	
-			</tr>
-	
-			<tr> 
-	
-			<td colspan="4" class="lh10">
-	
-				Q. �_��f�[�^�\����ʂ��������΁A�ʌ_�񏑂Ƃ��Ď�舵���܂����H<br>
-	
-				A. <span class="spColorRed">e-staffing�V�X�e���̌_��f�[�^���Q�Ƃ����������ʂ͌_�񏑂ł͂������܂���B</span><br>
-	
-				�@�@�ʌ_�񏑂Ƃ��Ĉ����Ă��������܂��̂́Apdf�y�ʘJ���Ҕh���_��̓��e�z�̈�����ʂł��B<br><br>
+				　　<span class="spColorRed">サポートセンターではロック解除は対応致しかねます</span>ので、予めご了承いただけますようお願い申し上げます。<br><br>
 	
 			</td>
 	
@@ -1231,15 +1167,29 @@
 	
 			<td colspan="4" class="lh10">
 	
-				Q. e-staffing�̒S���ғo�^���ύX�͂ǂ�����čs���܂����H<br>
+				Q. 契約データ表示画面を印刷すれば、個別契約書として取り扱えますか？<br>
 	
-				A. HOME��ʂ�<span class="spColorRed">�}�X�^�����e�i���X�����A������̊m�F�E�ύX���ҏW���������B</span><br>
+				A. <span class="spColorRed">e-staffingシステムの契約データを参照いただける画面は契約書ではございません。</span><br>
 	
-				�@�@���ڑ�IP�A�h���X�ύX�̂݉��L�����N����ύX�����擾���A�T�|�[�g�Z���^�[�ɂ����肭�������B<br>
+				　　個別契約書として扱っていただけますのは、pdf【個別労働者派遣契約の内容】の印刷書面です。<br><br>
 	
-				�@�@<a href="#" onclick = "window.open('https://www.e-staffing.co.jp/saki/flow.html'),'SakiIP'">IP�A�h���X�\�����i�h����l���� ���葱���̗�����j</a><br>
+			</td>
 	
-				�@�@<a href="#" onclick = "window.open('https://www.e-staffing.co.jp/moto/flow.html'),'MotoIP'">IP�A�h���X�\�����i�h�����l���� ���葱���̗�����j</a>
+			</tr>
+	
+			<tr> 
+	
+			<td colspan="4" class="lh10">
+	
+				Q. e-staffingの担当者登録情報変更はどうやって行いますか？<br>
+	
+				A. HOME画面の<span class="spColorRed">マスタメンテナンス→ご連絡先情報の確認・変更より編集ください。</span><br>
+	
+				　　※接続IPアドレス変更のみ下記リンクから変更書を取得し、サポートセンターにお送りください。<br>
+	
+				　　<a href="#" onclick = "window.open('https://www.e-staffing.co.jp/saki/flow.html'),'SakiIP'">IPアドレス申請書（派遣先様向け お手続きの流れ内）</a><br>
+	
+				　　<a href="#" onclick = "window.open('https://www.e-staffing.co.jp/moto/flow.html'),'MotoIP'">IPアドレス申請書（派遣元様向け お手続きの流れ内）</a>
 	
 			</td>
 	
@@ -1253,7 +1203,7 @@
 	
 		</table>
 	
-		<!------------------���悭���邲���⁪------------------>
+		<!------------------↑よくあるご質問↑------------------>
 	
 		
 	
@@ -1265,11 +1215,11 @@
 	
 		
 	
-		<!------------------���T�|�[�g�Z���^�[��------------------>
+		<!------------------↓サポートセンター↓------------------>
 	
 		
 	
-		<img src="/support/images/mid_support.gif" alt="�T�|�[�g�Z���^�[�^Support Center" class="spWidth500 spHeight27"><br>
+		<img src="/support/images/mid_support.gif" alt="サポートセンター／Support Center" class="spWidth500 spHeight27"><br>
 	
 		
 	
@@ -1283,13 +1233,13 @@
 	
 			<tr class="spTop"> 
 	
-			<td colspan="2" class="spWidth240"><img src="/support/images/support_tel.gif" class="spWidth175 spHeight30" alt="�d�b���⍇���F0120-288-187"></td>
+			<td colspan="2" class="spWidth240"><img src="/support/images/support_tel.gif" class="spWidth175 spHeight30" alt="電話お問合せ：0120-288-187"></td>
 	
 			<td rowspan="4"><img src="/support/images/scc_h80.jpg"><img src="/support/images/shim.gif" class="spWidth04 spHeight01" alt=""></td>
 	
 			<td rowspan="4"><div class="lh10">
 	
-			e-staffing�T�|�[�g�Z���^�[�́A<br>�w���v�f�X�N����̃T�|�[�g�Z���^�[���۔F��<br>(SCC)���擾���Ă��܂��B
+			e-staffingサポートセンターは、<br>ヘルプデスク協会のサポートセンター国際認定<br>(SCC)を取得しています。
 	
 		</div></td>
 	
@@ -1309,7 +1259,7 @@
 	
 			<td rowspan="2" class="spWidth35"><img src="/support/images/support_mail1.gif" class="spWidth35 spHeight30"></td>
 	
-			<td class="spWidth205"><img src="/support/images/support_mail2.gif" class="spWidth105 spHeight14" alt="���[�����⍇��"></td>
+			<td class="spWidth205"><img src="/support/images/support_mail2.gif" class="spWidth105 spHeight14" alt="メールお問合せ"></td>
 	
 			</tr>
 	
@@ -1333,19 +1283,19 @@
 	
 						<div class="lh12">
 	
-								<b><span class="spColorRed">�@�������������V�X�e�������̂��ē�</span></b><br>
+								<b><span class="spColorRed">　音声自動応答システム導入のご案内</span></b><br>
 	
-								�@�K�C�_���X�ɉ����āA��������e��I�����������I�y���[�^�[�ɂ��q�������Ă��������܂��B<br>
+								　ガイダンスに沿って、ご質問内容を選択いただきオペレーターにお繋ぎさせていただきます。<br>
 	
-								�@�@���ԍ��ꗗ<br>
+								　　○番号一覧<br>
 	
-								�@�@�@1�ԁF <b>�ΑӃV�X�e��</b>�Ɋւ��邨�⍇��<br>
+								　　　1番： <b>勤怠システム</b>に関するお問合せ<br>
 	
-								�@�@�@2�ԁF <b>�_��E�����E���p�J�n</b>�Ɋւ��邨�⍇��<br>
+								　　　2番： <b>契約・請求・利用開始</b>に関するお問合せ<br>
 	
-								�@�@�@3�ԁF <b>���̑����e�ɂ���</b>�̂��⍇��<br>
+								　　　3番： <b>その他内容について</b>のお問合せ<br>
 	
-								�@�@�@9�ԁF ������x�A�i�E���X���Đ�����<br>
+								　　　9番： もう一度アナウンスを再生する<br>
 	
 						</div>
 	
@@ -1355,25 +1305,25 @@
 	
 			<tr>
 	
-			<td colspan="4" class="lh10"><span class="spColorRed">���������ԈႢ�������Ă���܂��B�_�C�����̍ۂ͂����Ӊ������B</span><br>
+			<td colspan="4" class="lh10"><span class="spColorRed">※おかけ間違いが増えております。ダイヤルの際はご注意下さい。</span><br>
 	
-			�����⍇���̍ۂ́A���ID�A���[�UID�����茳�ɂ��p�ӂ��������B<br>
+			※お問合せの際は、企業ID、ユーザIDをお手元にご用意ください。<br>
 	
-			���܂��A���⍇���̑O�Ƀ}�j���A��������ǂ��Ă��������܂��悤���肢�v���܂��B<br>
+			※また、お問合せの前にマニュアルをご一読していただけますようお願い致します。<br>
 	
-			��IP�d�b����́A���q�l�̓d�b���ɂ���Ă͂����p�ł��Ȃ��\�����������܂��B<br>
+			※IP電話からは、お客様の電話環境によってはご利用できない可能性がございます。<br>
 	
-			�@ �������܂���<span class="spColorRedLike">0285-26-5012</span>�ɂ��|�����������B<br>
+			　 恐れ入りますが<span class="spColorRedLike">0285-26-5012</span>にお掛けください。<br>
 	
-			�����q�l����̂��\���o���e�𐳊m�ɔc�����Ή������Ă����������߁A�܂��A�Ή��i�������ړI�Ƃ���<br>
+			※お客様からのお申し出内容を正確に把握し対応させていただくため、また、対応品質向上を目的とした<br>
 	
-			�@ �I�y���[�^����̂��߂ɁA�ʘb��^�������Ă��������Ă���܂��B<br>
+			　 オペレータ教育のために、通話を録音させていただいております。<br>
 	
-			�@ �����^�������Ă����������l���́A���p�̕K�v���Ȃ��Ȃ莟�摬�₩�ɏ������܂��B<br>
+			　 これら録音させていただいた個人情報は、利用の必要がなくなり次第速やかに消去します。<br>
 	
-			�����₢���킹���������������ɁA�T�|�[�g�T�[�r�X����̂��߂̃A���P�[�g�ւ̂����͂����肢���Ă���܂��B<br>
+			※お問い合わせをいただいた方に、サポートサービス向上のためのアンケートへのご協力をお願いしております。<br>
 	
-			�@ ���A�A���P�[�g�Ɋւ�����́A�T�[�r�X����̖ړI�ȊO�ɗ��p���邱�Ƃ͈�؂������܂���B
+			　 尚、アンケートに関する情報は、サービス向上の目的以外に利用することは一切ございません。
 	
 			</td></tr>
 	
@@ -1395,7 +1345,7 @@
 	
 				<td class="lh12">
 	
-					��t���ԁF<span class="spColorRed"><b>���`�� 9:00�`19:00�i�j���E�N���N�n�������j</b></span><br>
+					受付時間：<span class="spColorRed"><b>月～金 9:00～19:00（祝日・年末年始を除く）</b></span><br>
 	
 					Business Hours :Open 9am to 7pm/Monday through Friday except holidays.
 	
@@ -1417,7 +1367,7 @@
 	
 		
 	
-		<!------------------���T�|�[�g�Z���^�[��------------------>
+		<!------------------↑サポートセンター↑------------------>
 	
 		
 	
@@ -1445,11 +1395,11 @@
 	
 		<td>
 	
-		<span class="lh10">�� PDF���ނ������ɂȂ邽�߂ɂ́AAdobe Acrobat Reader���K�v�ƂȂ�܂��B<br>
+		<span class="lh10">※ PDF書類をご覧になるためには、Adobe Acrobat Readerが必要となります。<br>
 	
-		Adobe Acrobat Reader���������łȂ����͍��̃A�C�R�����N���b�N���ă_�E�����[�h���ĉ������B<br>
+		Adobe Acrobat Readerをお持ちでない方は左のアイコンをクリックしてダウンロードして下さい。<br>
 	
-		�A�h�r�V�X�e���Y�AAcrobat Reader�y��Acrobat�̃��S�}�[�N�̓A�h�r�V�X�e���Y�Ђ̓o�^���W�ł��B<br></span>
+		アドビシステムズ、Acrobat Reader及びAcrobatのロゴマークはアドビシステムズ社の登録商標です。<br></span>
 	
 		</td>
 	
@@ -1471,13 +1421,13 @@
 	
 		<tr>
 	
-		<td class="spWidth90 spLeft spTop"><a href="http://privacymark.jp/" target="_blank"><img src="/support/images/p_mark.gif" alt="�o�}�[�N" class="spNoBorder spWidth85 spHeight85"></a></td>
+		<td class="spWidth90 spLeft spTop"><a href="http://privacymark.jp/" target="_blank"><img src="/support/images/p_mark.gif" alt="Ｐマーク" class="spNoBorder spWidth85 spHeight85"></a></td>
 	
-		<td class="spLeft spMiddle" style="padding-left: 5px; font-size: 11px; line-height: 14px;">���Ђ͌l���ی�}�l�W�����g�V�X�e���|�v������JISQ15001�ɏ����������ГƎ��̌l���ی�֘A�K����쐬���^�p���邱�ƂŁA���p�҂̊F�l�ɍ������S����񋟂����Ē����܂��B
+		<td class="spLeft spMiddle" style="padding-left: 5px; font-size: 11px; line-height: 14px;">当社は個人情報保護マネジメントシステム－要求事項JISQ15001に準拠した当社独自の個人情報保護関連規定を作成し運用することで、利用者の皆様に高い安全性を提供させて頂きます。
 	
 		<br>
 	
-		2009�N7��9���擾</td>
+		2009年7月9日取得</td>
 	
 		</tr>
 	
@@ -1491,7 +1441,7 @@
 	
 		
 	
-									<!------------------��ISO�}�[�N1��------------------>
+									<!------------------↓ISOマーク1↓------------------>
 	
 									<table class="spWidth500 spTable01">
 	
@@ -1505,15 +1455,15 @@
 	
 										<tr>
 	
-											<td class="lh12 spWidth320 spHeight60 spChar01" style="padding-left: 5px; font-size: 11px; line-height: 14px;">ISO/IEC27001 �F�͈ؔ́F<br>
+											<td class="lh12 spWidth320 spHeight60 spChar01" style="padding-left: 5px; font-size: 11px; line-height: 14px;">ISO/IEC27001 認証範囲：<br>
 	
-												Web�l�ޔh���ꊇ�Ǘ��V�X�e���ue-staffing�v�̊J���E�^�p�Ɩ�<br>
+												Web人材派遣一括管理システム「e-staffing」の開発・運用業務<br>
 	
-												�K�p�錾�� ��11��
+												適用宣言書 第11版
 	
 											</td>
 	
-											<td class="lh12 spWidth172 spHeight60" style="padding-left: 5px; font-size: 11px; line-height: 14px;">ISO22301:2012 �F�͈ؔ́F<br>
+											<td class="lh12 spWidth172 spHeight60" style="padding-left: 5px; font-size: 11px; line-height: 14px;">ISO22301:2012 認証範囲：<br>
 	
 												Development and Operation of the Web-based Temporary Staff Total Management System "e-staffing"<br>
 	
@@ -1525,7 +1475,7 @@
 	
 									</table>
 	
-									<!------------------��ISO�}�[�N1��------------------>
+									<!------------------↑ISOマーク1↑------------------>
 	
 		
 	
@@ -1537,7 +1487,7 @@
 	
 		
 	
-									<!------------------��ISO�}�[�N1��------------------>
+									<!------------------↓ISOマーク1↓------------------>
 	
 									<table class="spWidth500 spTable01">
 	
@@ -1549,9 +1499,9 @@
 	
 										<tr>
 	
-											<td class="lh12 spWidth500 spHeight60 spChar01" style="padding-left: 5px; font-size: 11px; line-height: 14px;">ISO/IEC20000 �F�͈ؔ́F<br>
+											<td class="lh12 spWidth500 spHeight60 spChar01" style="padding-left: 5px; font-size: 11px; line-height: 14px;">ISO/IEC20000 認証範囲：<br>
 	
-												Web�l�ޔh���ꊇ�Ǘ��V�X�e���ue-staffing�v�̒񋟂��T�|�[�g����IT�T�[�r�X�}�l�W�����g�V�X�e��
+												Web人材派遣一括管理システム「e-staffing」の提供をサポートするITサービスマネジメントシステム
 	
 											</td>
 	
@@ -1559,7 +1509,7 @@
 	
 									</table>
 	
-									<!------------------��ISO�}�[�N1��------------------>
+									<!------------------↑ISOマーク1↑------------------>
 	
 		
 	
@@ -1573,7 +1523,7 @@
 	
 		
 	
-									<!------------------��ASP�}�[�N��------------------>
+									<!------------------↓ASPマーク↓------------------>
 	
 									<table class="spWidth500 spTable01">
 	
@@ -1583,9 +1533,9 @@
 	
 											<td class="lh12 spWidth390" style="padding-left: 5px; font-size: 11px; line-height: 14px;">
 	
-												e-staffing�V�X�e���͍��c�@�l�}���`���f�B�A�U���Z���^�[�ɂ��A���S�E�M�����ɌW�����K�؂ɊJ�����A�����̗v���𖞂����Ă��邱�Ƃ�F�肳��Ă��܂��B
+												e-staffingシステムは財団法人マルチメディア振興センターにより、安全・信頼性に係る情報を適切に開示し、かつ一定の要件を満たしていることを認定されています。
 	
-												<br>2011�N2��17���擾
+												<br>2011年2月17日取得
 	
 											</td>
 	
@@ -1593,7 +1543,7 @@
 	
 									</table>
 	
-									<!------------------��ASP�}�[�N��------------------>
+									<!------------------↑ASPマーク↑------------------>
 	
 		
 	
@@ -1611,8 +1561,8 @@
 <script type="text/javascript">
 
 function errorMessage(){
-	checkSupport("�����p�u���E�U�́A����m�F�ς݊��ł͂������܂���B\n"
-			 	 + "���������삵�Ȃ��ꍇ���������܂��̂ŁA����m�F�ς݊��������p���������B")
+	checkSupport("ご利用ブラウザは、動作確認済み環境ではございません。\n"
+			 	 + "正しく動作しない場合がございますので、動作確認済み環境をご利用ください。")
 }
 
 if(!window.addEventListener){
@@ -1637,7 +1587,7 @@ if(!window.addEventListener){
 						<td class="cmBGColor6699FF"><img src="/images/shim.gif" class="cmWidth01 cmHeight10" alt=""></td>
 					</tr>
 					<tr>
-						<td class="lh12 cmHeight23 cmTdCenter cmTdTop"><br><a href="http://www.e-staffing.co.jp/" target="_blank">������ЃC�[�E�X�^�b�t�B���O�z�[���y�[�W</a><br>
+						<td class="lh12 cmHeight23 cmTdCenter cmTdTop"><br><a href="http://www.e-staffing.co.jp/" target="_blank">株式会社イー・スタッフィングホームページ</a><br>
 							<img src="/images/shim.gif" class="cmWidth01 cmHeight10" alt=""><br>
 							<img src="/images/copyright_menu.gif" alt="Copyright (c) 2002 e-staffing Co.,Ltd" class="cmWidth205 cmHeight14">
 						</td>
