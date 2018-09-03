@@ -1,6 +1,6 @@
 {
   "version": "3.0.9",
-  "content_script": "content-script-lite.bundle.b6d1bca92248bc479f5e.js",
+  "content_script": "content-script-lite.bundle.a8bb32aa41729cdc7be5.js",
   "background_page": "background.html",
   "externally_connectable": [
     "https://portal.sku.id/*"
