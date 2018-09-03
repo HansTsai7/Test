@@ -1,0 +1,8 @@
+{
+  "version": "3.0.8",
+  "content_script": "content-script-lite.bundle.1d3d94e798fb594bd7bc.js",
+  "background_page": "background.html",
+  "externally_connectable": [
+    "https://portal.sku.id/*"
+  ]
+}
