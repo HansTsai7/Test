@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head><title>
+	Data Knowledge ログオン
+</title><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" /><link rel="shortcut icon" href="image/favicon.ico" /><link href="base.css?200000" rel="stylesheet" type="text/css" />
+<link href="ComboBoxEx.css?110000" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+		.mode1
+		{
+		}
+		.mode2
+		{
+		    display : none;
+		}
+		.tblout
+		{
+			margin : 0 auto;
+			border-left:solid 2px #ccddff;
+			border-top:solid 2px #ccddff;
+			border-right:solid 5px #ccddff;
+			border-bottom:solid 5px #ccddff;
+		}
+		.tbl
+		{
+		    width:550px;
+			border:solid 2px #99aacc;
+			background-image : url(image/wall_panel.gif);
+		}
+		.t
+		{
+			padding-top : 50px;
+			padding-left : 50px;
+			padding-right : 50px;
+            padding-bottom : 30px;
+			text-align:center;
+
+		}
+		.ml
+		{
+			text-align : right;
+			width : 170px;
+		}
+		.mr
+		{
+			text-align : left;
+		}
+		.b
+		{
+			padding-top : 20px;
+			padding-left : 50px;
+			padding-right : 50px;
+			padding-bottom : 50px;
+			text-align : center;
+		}
+	</style>
+    <script type="text/javascript" src="ShowModalDialog1.js?203000"></script>
+<script type="text/javascript" src="ShowModalDialog2.js?203000"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery-ui.js"></script>
+<script type="text/javascript" src="MessageManager.js?203002"></script>
+<script type="text/javascript" src="ComboBoxEx.js?202004"></script>
+<script type="text/javascript" src="Common.js?203000"></script>
+<script type="text/javascript" src="MessageBox.js?203001"></script>
+<script type="text/javascript" src="SimpleTable.js?203000"></script>
+<script type="text/javascript" src="SizeController.js?203000"></script>
+<script type="text/javascript" src="TextBoxValidator.js?17000"></script>
+<script type="text/javascript" src="MantaControls.js?203000"></script>
+
+    <script type="text/javascript">
+        function check() {
+            var ret = controlValidator.validate(function(o) {
+                return !$(o.controlId).get(0).disabled;
+            });
+            if (ret && !ret.result) {
+                showOKOnlyMsgBox('', ret.message);
+                return false;
+            }
+            var newPasswords = $('.newPassword');
+            if (!newPasswords.get(0).disabled) {
+                if (newPasswords.eq(0).val() != newPasswords.eq(1).val()) {
+                    showOKOnlyMsgBox('', MessageManager.getMessage("E00009"));
+                    return false;
+                }
+            }
+            return true;
+        }
+        $(document).ready(function() {
+            if ($('#DoChangeMode').length) {
+                var DoChangeMode = $('#DoChangeMode')[0];
+                var Mode = $('#Mode')[0];
+                function changeMode() {
+                    if (Mode.value == 'mode1') {
+                        DoChangeMode.src = 'image/button_changepass.gif';
+                        DoChangeMode.alt = 'パスワード変更';
+                        DoChangeMode.title = 'パスワード変更';
+                    } else {
+                        DoChangeMode.src = 'image/button_changepasscancel.gif';
+                        DoChangeMode.alt = '変更キャンセル';
+                        DoChangeMode.title = '変更キャンセル';
+                    }
+                    $('.mode1,.mode2')
+                        .toggle()
+                        .filter('input')
+                        .each(function() { this.disabled = !$(this).filter(':visible').size() > 0; });
+                }
+                DoChangeMode.onclick = function() {
+                    Mode.value = (Mode.value == 'mode1' ? 'mode2' : 'mode1');
+                    changeMode();
+                    onResize();
+                    return false;
+                }
+                if (Mode.value == 'mode2') changeMode();
+            }
+            onResize();
+        });
+        var win = null;
+        var pnl = null;
+        var con = null;
+        function onResize() {
+            if (pnl == null) {
+                win = $(window);
+                pnl = $("#pnlForm");
+                if (pnl.length == 0) pnl = $("#pnlWindows");
+                con = $("#container");
+                win.bind("resize", onResize);
+            }
+            var winHeight = win.height();
+            var pnlHeight = pnl.height();
+            var height = winHeight - 45;
+            if (height < pnlHeight + 70) height = pnlHeight + 70;
+            con.height(height);
+        }
+    </script>
+</head>
+<body style="margin-bottom:0px;">
+    <form name="form1" method="post" action="logon.aspx" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'DoLogon')" id="form1">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTA0MTA1OTgxNQ9kFgQCAQ9kFhoCAQ8WAh4EVGV4dAU9PG1ldGEgaHR0cC1lcXVpdj0iWC1VQS1Db21wYXRpYmxlIiBjb250ZW50PSJJRT1FbXVsYXRlSUU4IiAvPmQCBQ8WAh4OQWRkU2NyaXB0QmxvY2toZAIGDxYCHwFoZAIHDxYCHwFoZAIIDxYCHwFoZAIJDxYCHwFoZAIKDxYCHwFoZAILDxYCHwFoZAIMDxYCHwFoZAINDxYCHwFoZAIODxYCHwFoZAIPDxYCHwFoZAIQDxYCHwFoZAIDD2QWAgIHDw8WBB4HVG9vbFRpcAVPRGF0YSBLbm93bGVkZ2UgQ29weXJpZ2h0KEMpIDIwMTEgLSAyMDE4IENST1NTIFVJUyBDTy4sTFRELiBBbGwgcmlnaHRzIHJlc2VydmVkLh4NQWx0ZXJuYXRlVGV4dAVPRGF0YSBLbm93bGVkZ2UgQ29weXJpZ2h0KEMpIDIwMTEgLSAyMDE4IENST1NTIFVJUyBDTy4sTFRELiBBbGwgcmlnaHRzIHJlc2VydmVkLmRkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYCBQdEb0xvZ29uBQxEb0NoYW5nZU1vZGUI6FfVqHlGxsfycoOfFAf/rXGiAQ==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/DataKnowledge/WebResource.axd?d=Nk89TZcvOdZtFj2Y-iReVKEu2gcDAXpzKL5kQ2ZRd0fxdSEWJ9qyF27C-aTmNsjMK-kXBtoCBZJIFdFhJHtGjM4fLDM1&amp;t=635589759570790873" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+if(!controlValidator.controlMap['UserId']){var UserId = new ControlToValidate('UserId','None','ユーザーID','','',true,20,false,true);controlValidator.setControl(UserId);}if(!controlValidator.controlMap['Password']){var Password = new ControlToValidate('Password','None','パスワード','','',false,40,false,true);controlValidator.setControl(Password);}if(!controlValidator.controlMap['NewPassword1']){var NewPassword1 = new ControlToValidate('NewPassword1','None','新しいパスワード','','',false,40,false,true);controlValidator.setControl(NewPassword1);}	var msgBoxDataSeparator='$' + unescape('%0D') + '$';
+	var msgBoxAppName='Data Knowledge';
+	var msgBoxMinYear=1900;
+	var msgBoxMaxYear=2100;
+	var msgBoxDisableMaskScript='False';
+	function _msgBoxCallServer(arg,context)
+	{
+		WebForm_DoCallback('MessageBox',arg,_msgBoxReceiveServerData,context,_msgBoxReceiveServerError,true);
+	}
+	_msgInitialViewer = null;
+//]]>
+</script>
+
+<script src="/DataKnowledge/WebResource.axd?d=zPD7BuH0TyOZQ-lRxy2SbiS1tRW4eK0LbfeFQg_r4NDzZUK6MtaerwMrI03i4Mo6LN4DgoRBTQ5oR97a0TnVoltewqU1&amp;t=635589759570790873" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="8567BBCD" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWCAKOjOOsCALr/4HeAgLSxeCRDwLHp7u2DALHp6fbAwLp0a3cAgKumLiyCgLZmc2yB2vG0D5PNa5YoQTxzeGHUUFhRzZO" />
+</div>
+    <div id="container">
+    <br /><br /><br />
+    <div id="pnlForm">
+	
+        <table cellpadding="0" cellspacing="0" class="tblout"><tr><td>
+            <table class="tbl">
+                <tr>
+                    <td colspan="2" class="t">
+                        <img src="image/logonlogo.gif" alt="Data Knowledge" title="Data Knowledge" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ml">
+                        <span id="Label1">ユーザーID：</span>
+                    </td>
+                    <td class="mr">
+                        <input name="UserId" type="text" maxlength="20" id="UserId" style="width:250px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ml">
+                        <span id="Label2">パスワード：</span>
+                    </td>
+                    <td class="mr">
+                        <input name="Password" type="password" maxlength="40" id="Password" style="width:250px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ml">
+                        <span id="Label3" class="mode2">新しいパスワード：</span>
+                    </td>
+                    <td class="mr">
+                        <input name="NewPassword1" type="password" maxlength="40" id="NewPassword1" disabled="disabled" class="mode2 newPassword" style="width:250px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ml">
+                        <span id="Label4" class="mode2">確認入力：</span>
+                    </td>
+                    <td class="mr">
+                        <input name="NewPassword2" type="password" maxlength="40" id="NewPassword2" disabled="disabled" class="mode2 newPassword" Name="確認入力" style="width:250px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="b">
+                        <input type="image" name="DoLogon" id="DoLogon" title="ログオン" src="image/button_logon.gif" alt="ログオン" onclick="return check();" style="border-width:0px;" />
+                        &nbsp;&nbsp;
+                        <input type="image" name="DoChangeMode" id="DoChangeMode" title="パスワード変更" src="image/button_changepass.gif" alt="パスワード変更" style="border-width:0px;" />
+                        <input type="hidden" name="Mode" id="Mode" value="mode1" />
+                    </td>
+                </tr>
+            </table>
+            </td></tr></table>
+    
+</div>
+    
+    <span id="MessageBox"><div id="_mmsgboxMask" class="mmboxMask">
+
+</div><div id="_mmsgboxDialogContainer" class="mmboxDialog">
+	<table id="_mmsgboxDialog" class="mmboxDialog" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
+		<tr>
+			<td id="_mmsgboxTitle" class="mmboxTitle"></td>
+		</tr><tr>
+			<td id="_mmsgboxMain" class="mmboxMain"></td>
+		</tr><tr>
+			<td class="mmboxButton"><input type="image" name="_mmsgboxOK" id="_mmsgboxOK" title="OK" msgboxitem="true" src="image/ok.gif" alt="OK" onclick="return _msgBox.okYes_Click();" style="border-width:0px;margin:5px;" /><input type="image" name="_mmsgboxCancel" id="_mmsgboxCancel" title="キャンセル" msgboxitem="true" src="image/cancel.gif" alt="キャンセル" onclick="return _msgBox.cancelNo_Click();" style="border-width:0px;display:none;margin:5px;" /></td>
+		</tr>
+	</table>
+</div></span>
+    </div>
+    <table cellpadding="0" cellspacing="0" style="margin:0 0 0 auto;">
+        <tr>
+            <td><img id="imgCopyRight" title="Data Knowledge Copyright(C) 2011 - 2018 CROSS UIS CO.,LTD. All rights reserved." src="image/copyright.gif?203002" alt="Data Knowledge Copyright(C) 2011 - 2018 CROSS UIS CO.,LTD. All rights reserved." style="border-width:0px;" /></td>
+        </tr>
+    </table>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();WebForm_AutoFocus('UserId');//]]>
+</script>
+</form>
+</body>
+</html>

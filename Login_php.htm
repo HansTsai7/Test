@@ -1,0 +1,462 @@
+<HTML>
+<HEAD>
+<base href="/">
+<!--[if IE]>
+    <script type="text/javascript">
+        (function() {
+            var baseTag = document.getElementsByTagName('base')[0];
+            if (!(/^http/i).test(baseTag.href)) { // in case browser already translate to absolute path
+                baseTag.href = location.protocol + '//' +  location.host +  baseTag.href;
+            }
+            baseTag.href = baseTag.href; // IE9 not correctly loading resources issue.
+        })();
+    </script>
+<![endif]-->
+<TITLE>Login</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel='stylesheet' type='text/css' href='/styles/falcon_content.css?__version=1536309247'/>
+<style type="text/css">
+td {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: black; /*#FFFFFF; */
+}
+.msg {
+    background-color: #FBFEFF;
+    border: 3px solid #C0D5E5;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-height: 150px;
+    max-width: 550px;
+    overflow: auto;
+    visibility: hidden;
+}
+.alert {font-weight: bold;color: red;}
+
+html{display : none ; }
+body {
+    overflow-y: auto;
+}
+</style>
+</HEAD>
+<BODY bgcolor="#F2F6FA">
+  <table width="100%" style="height:100%">
+    <tr>
+      <td align="center" valign='middle'>
+          <!-- BEGIN PAN_FORM_CONTENT -->
+<!--suppress HtmlUnknownAttribute -->
+<form name="login" id="login_form" method="post" action="" autocomplete="off">
+<!-- hidden variables, we are going to set this to the session, bug fix 2157 -->
+<input type="hidden" name="prot" value="">
+<input type="hidden" name="server" value="">
+
+<input type="hidden" name="authType" value="init">
+<input type="hidden" name="challengeCookie" value="">
+
+<div id="taLogin" >
+<script src='js/3rdParty/es5-shim-3.4.0x/es5-shim.js'></script>
+<script src='js/3rdParty/es5-shim-3.4.0/es5-sham.js'></script>
+<script src='js/3rdParty/umd-0.4.10/umd.js'></script>
+<script src='js/3rdParty/ext/adapter/ext/ext-base.js'></script>
+<script src='js/3rdParty/ext/ext-all.js'></script>
+<script src='js/pan/_umd.require.config.js'></script>
+<script src='js/Pan.js'></script>
+<script src='js/pan/base/util.js'></script>
+<script src='js/pan/base/msg.js'></script>
+<script src='js/pan/base.js'></script>
+<script src='js/pan/base/cookie.js'></script>
+<script src='js/pan/test/QaAutomation.js'></script>
+<script type="text/javascript">
+var cacUserName = "";
+// initialize upon load to let all browsers establish content objects
+function initDHTMLAPI() {
+    if (document.images) {
+        window.isIE6CSS = (document.compatMode && document.compatMode.indexOf("CSS1") >= 0) ? true : false;
+    }
+    if(Ext.isIE){
+        if (new RegExp(/msie ([0-9]{1,})/i).exec(navigator.userAgent) != null) {
+            var rv = parseFloat( RegExp.$1 ); // ie version
+            if (rv > 9) {
+                // 10 and above
+                Pan.base.cookie.set('isAboveIE10',rv);
+            }
+        }
+    } else if (new RegExp(/trident/i).exec(navigator.userAgent) != null) {
+        Pan.base.cookie.set('isAboveIE10','10'); // 11 and above always treat it as 10. Ext.isIE failed here
+    }
+}
+
+// Return the available content width space in browser window
+
+function getInsideWindowWidth() {
+    if (window.innerWidth) {
+        return window.innerWidth;
+    } else if (isIE6CSS) {
+        // measure the html elements clientWidth
+        return document.body.parentElement.clientWidth;
+    } else if (document.body && document.body.clientWidth) {
+        return document.body.clientWidth;
+    }
+    return 0;
+}
+
+// Return the available content height space in browser window
+function getInsideWindowHeight() {
+    if (window.innerHeight) {
+        return window.innerHeight;
+    } else if (isIE6CSS) {
+        // measure the html elements clientHeight
+        return document.body.parentElement.clientHeight;
+    } else if (document.body && document.body.clientHeight) {
+        return document.body.clientHeight;
+    }
+    return 0;
+}
+
+function hideElement() {
+    for (var i=0; i < arguments.length; i++) {
+        var dv  = document.getElementById(arguments[i]);
+        if(dv) {
+            dv.style.display = "none";
+        }
+    }
+}
+
+function showWait(show){
+    if(show){
+        hideElement("trInitName", "trInitPwd", "trLoginBtn", 'trInitLocale');
+        var dv = document.getElementById("wdiv");
+        if(dv) dv.style.display="block";
+    }
+}
+
+function get_url_param( name )
+{
+    name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+    var regexS = "[\\?&]"+name+"=([^&#]*)";
+    var regex = new RegExp( regexS );
+    var results = regex.exec( window.location.href );
+    if( results == null )
+        return "";
+    else
+        return results[1];
+}
+
+//
+function loadPage() {
+
+    initDHTMLAPI();
+
+    var errMsg = "";
+    if (0) {
+        var issuesMsg = "<li>&lt;pre&gt;&lt;/pre&gt;";
+        errMsg = issuesMsg;
+    } else if (0) {
+        var upgradeLogMsg = "<li>";
+        errMsg = upgradeLogMsg;
+    }
+
+    var thisForm = document.getElementById("login_form");
+
+    var respStatus = "Success";
+    var redirectUrl = "";
+    if (respStatus == "Warning") {
+        alert("");
+        showWait(true);
+        Pan.base.cookie.set("isFromLogin", "true", 1);
+        window.location.href = redirectUrl;
+    } else if (respStatus == "Error") {
+        if (errMsg != "")
+            errMsg += "<br><br>";
+
+        errMsg += "<li>";
+    } else if (respStatus == "Success") {
+        if ("yes" == "yes") {
+            if ("yes" == "no") {
+                // no password needed
+                if (!cacUserName) {
+                    // if password is not needed and there is no user name it means cac check failed or something
+                    errMsg += "<li>Insufficient credentials.";
+
+                    // don't show any username/password fields and login button
+                    hideElement("trInitName", "trInitPwd", "trLoginBtn", 'trInitLocale');
+                } else {
+                    thisForm.user.value = cacUserName;
+
+
+                    // fill the authType field with "cacOnly" so that when we submit the form we know what to do
+                    // at the back end
+                    thisForm.authType.value = "cacOnly";
+
+                    /* KK Test - for now it looks like this automatic submit is not working. Show
+                     * the submit button for now. When we uncomment this we should move it to after
+                     * showing/hiding the buttons below
+                     // fill in stuff as if submit was clicked
+                     submitClicked();
+
+                     // then submit the form
+                     thisForm.submit();
+                     //document.getElementById("trLoginBtn").onclick();
+                     */
+
+                    // hide some of the fields in the form
+                    hideElement("trInitName", "trInitPwd");
+                    // showing the login button for now
+                    //document.getElementById("trLoginBtn").style.display = "none";
+                    document.getElementById("trLoginBtn").style.display = "block";
+
+                    // show the creating user session message
+                    document.getElementById("wdiv").style.display = "block";
+                    document.getElementById("wdiv").innerHTML = "ログインボタンをクリックしてログイン" + ' ' + cacUserName;
+                }
+
+            } else {
+                // password needed, just go on to show the page
+
+                // fill the userName field
+                thisForm.user.value = cacUserName;
+            }
+        } else {
+            // everything ok, just redirect to next page
+            var expMsg = "";
+            if (expMsg != "" ) {
+                alert(expMsg);
+                //document.getElementById("wdiv").innerHTML = "<span style=\"color:#166D7D\">" + expMsg + "</span><br>" + document.getElementById("wdiv").innerHTML ;
+            }
+            showWait(true);
+            Pan.base.cookie.set("isFromLogin", "true", 1);
+            window.location.href = redirectUrl;
+        }
+    } else if (respStatus == "Challenge") {
+        // hide the init name/pwd row and show the challenge msg/pwd row
+        hideElement("trInitName", "trInitPwd");
+        document.getElementById("trChallengeMsg").style.display = "";
+        document.getElementById("trChallengePwd").style.display = "";
+
+        // fill the challenge msg field
+        document.getElementById('spChallengeMsg').innerHTML = "";
+
+        // fill the authType and challengeCookie field
+        thisForm.authType.value = "challenge";
+        thisForm.challengeCookie.value = "";
+
+        // also fill the user field with the previously entered user name
+        thisForm.user.value = user;
+
+    }
+    // respStatus can also be "" when we come to this page the first time
+
+    if (errMsg != "") {
+        var divObj = document.getElementById("dError");
+
+        divObj.style.display = "block";
+        divObj.innerHTML = errMsg;
+    }
+
+    if (document.login.user.value == '') {
+        var nameRow = document.getElementById('trInitName');
+        if (nameRow && nameRow.style.display != "none") {
+            // use this to check if this field is visible
+            document.login.user.focus();
+        }
+    }
+
+}
+
+function submitClicked() {
+    var thisForm = document.getElementById("login_form");
+    // hide the error div, just incase it was showing.
+    var divObj = document.getElementById("dError");
+
+    divObj.style.display = "none";
+    divObj.innerHTML = "";
+
+    // fill the hidden fields for prot and server, bug fix 2157
+    var prot = window.location.protocol;
+    var server = window.location.host;
+    //alert("prot: " + prot + ", server: " + server);
+    thisForm.prot.value = prot;
+    thisForm.server.value = server;
+}
+
+function checkCapsLock(e){
+    var el = document.getElementById('divcl');
+    if (!el) return;
+
+    var keycode = e.keyCode? e.keyCode : e.which;
+    var shift = e.shiftKey? e.shiftKey : !!(keycode == 16);
+
+    if((keycode >= 65 && keycode <= 90 && !shift) || (keycode >= 97 && keycode <= 122 && shift))
+        el.style.visibility = 'visible';
+    else
+        el.style.visibility = 'hidden';
+}
+
+function checkCapsLockChallenge(e){
+    var el = document.getElementById('divclChallenge');
+    if (!el) return;
+
+    var keycode = e.keyCode? e.keyCode : e.which;
+    var shift = e.shiftKey? e.shiftKey : !!(keycode == 16);
+
+    if((keycode >= 65 && keycode <= 90 && !shift) || (keycode >= 97 && keycode <= 122 && shift))
+        el.style.visibility = 'visible';
+    else
+        el.style.visibility = 'hidden';
+}
+
+Ext.onReady(function(){
+    var ml = 20;
+    ml = 63;
+    var btn = Ext.get('submit');
+    if (btn) {
+        btn.on('click', submitClicked);
+    }
+    var u = Ext.get('user');
+    if (u && u.dom) {
+        u = Ext.get('user').dom;
+        var uname = Pan.base.param('user') || '';
+        if (uname) {
+            u.value = uname;
+        }
+        u.maxlength = ml;
+    }
+    loadPage();
+    var msgE = Ext.getDoc().child('.msg');
+    if (msgE) {
+        if (Ext.isIE8) {
+            var prefMaxWidth = msgE.getStyle('max-width').replace(/px$/, '');
+            var prefMaxHeight = msgE.getStyle('max-height').replace(/px$/, '');
+            if (msgE.getHeight() > prefMaxHeight) {
+                msgE.setHeight(prefMaxHeight);
+            }
+            if (msgE.getWidth() > prefMaxWidth) {
+                msgE.setWidth(prefMaxWidth);
+            }
+        }
+        if ("") {
+            var fieldSet = Ext.create({
+                title: "以下のステートメントを受け入れ、同意します",
+                xtype: "fieldset",
+                checkboxToggle: true,
+                onCheckClick: function() {
+                    Ext.fly("submit").dom.disabled = !this.getValue();
+                },
+                getValue: function() {
+                    if (this.checkbox) {
+                        return this.checkbox.dom.checked;
+                    }
+                },
+                renderTo: 'motd',
+                bodyCfg: {
+                    html: msgE.dom.innerHTML
+                }
+
+            });
+            fieldSet.checkbox.dom.checked = false;
+            Ext.fly("submit").dom.disabled = !fieldSet.getValue();
+        } else {
+            Ext.fly('motd').appendChild(msgE);
+            msgE.setStyle({visibility: 'visible'});
+        }
+    }
+});
+
+if( self == top ) {
+    document.documentElement.style.display = 'block' ;
+} else {
+    top.location = self.location ;
+}
+
+function doSubmit(thisform)
+{
+    return true;
+}
+</script>
+<table border="0" cellpadding="0" cellspacing="0" class="loginscreen_logo pan-form">
+    <tr>
+        <td height="125">&nbsp;</td>
+    </tr>
+    <tr>
+        <td height="167" style="background-repeat:no-repeat; text-align:left; padding-left:110px;">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr> <td colspan="2">&nbsp;</td></tr>
+                <tr>
+                    <td align="center" colspan="2">
+                        <div id="wdiv" style="display:none">
+                            <span style="color:#166D7D"><strong>管理セッションを作成しています。お待ちください。..</strong></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr> <td colspan="2">&nbsp;</td></tr>
+            </table>
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr id="trInitName" style="display: block">
+                    <td width="77" height="30"><label for="user">名前</label></td>
+                    <td><input type="text" id="user" name="user" size="19"></td>
+                </tr>
+                <tr id="trInitPwd" style="display: block">
+                    <td height="30" width="77"><label for="passwd">パスワード</label></td>
+                    <td>
+                        <input type="password" maxlength="63" size="19" id="passwd" name="passwd" onKeyPress="checkCapsLock(event)">
+                        <span id="divcl" style="visibility:hidden"><img src="images/ssl_decryption.gif" title="CAPS LOCK"  alt="CAPS LOCK"/></span>
+                    <td>
+                </tr>
+                <tr id="trInitLocale" style="display: none">
+                    <td height="30" width="77">Language</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr id="trChallengeMsg" style="display: none">
+                    <td height="30" colspan="2">
+                        <span id="spChallengeMsg"></span>
+                    </td>
+                </tr>
+                <tr id="trChallengePwd" style="display: none">
+                    <td height="30" colspan="2">
+                        <label for="challengePwd"></label><input type="password" name="challengePwd" id="challengePwd" size="19" maxlength="63" onKeyPress="checkCapsLockChallenge(event);">
+                        <span id="divclChallenge" style="visibility:hidden"><img src="images/ssl_decryption.gif" title="CAPS LOCK"  alt="CAPS LOCK"/></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+                <tr id="trLoginBtn" style="display: block">
+                    <td width="77">&nbsp;</td>
+                    <td><input class="buttonFixed" type="submit" id="submit" name="ok" value="ログイン" onclick="return doSubmit(this.form);" style="margin-left:0">
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td><div id="dError" style="display:none"> </div></td>
+    </tr>
+    <tr>
+        <td><div id="motd"></div></td>
+    </tr>
+</table>
+</div>
+</form>
+<!-- END PAN_FORM_CONTENT -->
+      </td>
+    </tr>
+  </table>
+  </BODY>
+</HTML>
+
+<!--
+	 __LOGIN_PAGE__
+-->
+
+<!--
+	 __LOGIN_PAGE_FOR_PANORAMA_BACKWARD_COMPATIBILITY__
+-->
+

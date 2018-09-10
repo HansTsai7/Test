@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=emulateIE7" />
+		<meta http-equiv="Expires" content="-1" />
+		<meta http-equiv="Cache-Control" content="no-cache" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<title>ログイン</title><script type="text/javascript" src="/fukuske_web/faces/javax.faces.resource/jsf.js?ln=javax.faces"></script><script type="text/javascript" src="/fukuske_web/faces/javax.faces.resource/uis/uranus/js/uranus.js"></script><script type="text/javascript" src="/fukuske_web/faces/javax.faces.resource/js/ubcommon.js"></script>
+		<base target="_self" />
+
+		<script>
+			focusid = "";
+			lockSelectableRow = "";
+		</script>
+				<script language="JavaScript">
+					var newwin = null;
+					if ( !self.opener ) {
+					//var x = screen.availWidth;
+					//var y = screen.availHeight;
+					//if ( !x || x > 1014 ) x = 1014;
+					//if ( !y || y > 658 ) y = 658;
+					//newwin = window.open( self.location.href, "_blank", "toolbar=no,location=no,menubar=no,status=yes,scrollbars=yes,width=" + x
+					newwin = window.open( self.location.href, "_blank", "toolbar=no,location=no,menubar=no,status=yes,scrollbars=yes,left=0,top=0" );
+					if( newwin != null ){
+					newwin.resizeTo(1024,738);
+					self.opener = self;
+					//self.close();
+					self.open("about:blank","_self").close();
+					}
+					}
+
+					if(!focusid){
+					focusid = "userId";
+					}
+
+					function confirmCloseWindow(){
+					var ok = confirm("システムを終了します。よろしいですか？");
+					if(ok){
+					window.open("about:blank","_self").close();
+					}
+					return false;
+					}
+				</script><link type="text/css" rel="stylesheet" href="/fukuske_web/faces/javax.faces.resource/css/cssLayout.css" /><link type="text/css" rel="stylesheet" href="/fukuske_web/faces/javax.faces.resource/css/default.css" /></head>
+	<body onload="uranusOnLoad();" onunload="uranusOnUnload();">
+		<div id="header">
+			<table height="30px" cellspacing="1" border="2" borderColor="white">
+				<tr>
+					<td width="70">KTSOR00100
+					</td>
+					<td width="714" align="center"><b>ログイン</b>
+					</td>
+					<td width="136">2018/09/07 18:56
+					</td>
+				</tr>
+			</table>
+		</div>
+<form id="j_idt20" name="j_idt20" method="post" action="/fukuske_web/faces/login.xhtml;jsessionid=3767ab12cf2ed074160b9b645cc4" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt20" value="j_idt20" />
+
+			<input type="text" style="display:none;" />
+			<div>
+				<div id="messagebutton"><img src="/fukuske_web/faces/javax.faces.resource/img/error_msg.png" height="16" onclick="showError();" title="エラーメッセージ表示" width="16" />
+				</div>
+				<div id="messages"><div id="j_idt20:msgtable"></div>
+				</div>
+				<div id="buttons" align="right"><input type="submit" name="j_idt20:j_idt25" value="終了" class="std_btn" onclick="return confirmCloseWindow();" />
+				</div>
+			</div>
+
+
+			<div id="content">
+				<hr width="950px" />
+				<div>
+					<center>
+
+						<table style="width:350pt" border="0">
+							<tr>
+								<td align="center"><img src="/fukuske_web/faces/javax.faces.resource/img/fukusuke_logo.png" />
+								</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<b>
+										<font style="font-size:26px;color:blue;">福助株式会社</font>
+									</b>
+								</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<b>
+										<font style="font-size:26px;color:blue;">工場システム</font>
+									</b>
+								</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<font style="font-size:26px;color:blue;">ログイン画面</font>
+								</td>
+							</tr>
+						</table>
+						<br />
+						<br />
+						<br />
+
+						<table style="width:280pt" border="0">
+							<tr style="height:14pt">
+								<td style="width:80pt" class="item_label required">ユーザーＩＤ</td>
+								<td align="left"><input id="j_idt20:userId" type="text" name="j_idt20:userId" class="code_input" onfocus="focusIn(this,event);" onblur="focusOut(this,event);" maxlength="10" size="10" title="ユーザーＩＤ" />
+								</td>
+							</tr>
+							<tr style="height:14pt">
+								<td style="width:80pt" class="item_label required">パスワード</td>
+								<td align="left"><input id="j_idt20:password" type="password" name="j_idt20:password" value="" onfocus="focusIn(this,event);" onblur="focusOut(this,event);" maxlength="32" size="25" title="パスワード" class="code_input" />
+								</td>
+							</tr>
+							<tr style="height:14pt">
+								<td></td>
+								<td align="left"><input id="j_idt20:btnLogin" type="submit" name="j_idt20:btnLogin" value="ログイン" class="std_btn" /><input id="j_idt20:btnClear" type="submit" name="j_idt20:btnClear" value="クリア" class="std_btn" />
+								</td>
+							</tr>
+						</table>
+
+						<table style="width:280pt" border="0">
+							<tr style="height:14pt">
+								<td style="width:80pt" class="item_label">現在パスワード</td>
+								<td align="left"><input id="j_idt20:genzaiPassword" type="password" name="j_idt20:genzaiPassword" value="" onfocus="focusIn(this,event);" onblur="focusOut(this,event);" maxlength="32" size="25" title="現在パスワード" class="code_input" />
+								</td>
+							</tr>
+							<tr style="height:14pt">
+								<td style="width:80pt" class="item_label">新規パスワード</td>
+								<td align="left"><input id="j_idt20:shinkiPassword" type="password" name="j_idt20:shinkiPassword" value="" onfocus="focusIn(this,event);" onblur="focusOut(this,event);" maxlength="32" size="25" title="新規パスワード" class="code_input" />
+								</td>
+							</tr>
+							<tr style="height:14pt">
+								<td class="item_label">確認パスワード</td>
+								<td align="left"><input id="j_idt20:kakuninPassword" type="password" name="j_idt20:kakuninPassword" value="" onfocus="focusIn(this,event);" onblur="focusOut(this,event);" maxlength="32" size="25" title="確認パスワード" class="code_input" />
+								</td>
+							</tr>
+							<tr style="height:14pt">
+								<td></td>
+								<td align="left"><input id="j_idt20:btnUpdatePassword" type="submit" name="j_idt20:btnUpdatePassword" value="パスワードの更新" class="wid160_btn" onclick="return confirmUpdate();" />
+								</td>
+							</tr>
+						</table>
+
+					</center>
+				</div>
+			</div><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="78768082901581954:5583063331437372910" autocomplete="off" />
+</form>
+
+		<div id="waiting">
+			<div align="center">
+				しばらくおまちください・・・
+			</div>
+			<div align="center"><img src="/fukuske_web/faces/javax.faces.resource/uis/uranus/img/ajax-loader.gif" height="30" width="200" />
+			</div>
+		</div>
+	</body>
+</html>
