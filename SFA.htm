@@ -1,0 +1,88 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML 
+xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><HEAD id="ctl00_RootMasterHead"><META 
+content="IE=11.0000" http-equiv="X-UA-Compatible">
+
+<META http-equiv="X-UA-Compatible" content="IE=Edge">
+<META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<META http-equiv="Content-Script-Type" content="text/javascript"><TITLE>	 ログイン 
+</TITLE><LINK href="../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"><LINK 
+href="../favicon.ico" rel="icon" type="image/vnd.microsoft.icon"><LINK href="http://0.0.0.0/Common/css/ui-lightness/jquery-ui-1.10.4.custom.min.css?20150212113726" 
+rel="stylesheet" type="text/css" media="all"><LINK href="http://0.0.0.0/Common/css/login.css?20150212113726" 
+rel="stylesheet" type="text/css" media="all">     
+<SCRIPT src="http://0.0.0.0/Common/js/libs/jquery-1.10.2.min.js?20150212113726" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="http://0.0.0.0/Common/js/libs/jquery-ui-1.10.3.custom.min.js?20150212113726" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="http://0.0.0.0/Common/js/libs/jquery.browser.min.js?20150212113726" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="http://0.0.0.0/Common/js/libs/pharmart.globalinit.js?20150212113726" type="text/javascript"></SCRIPT>
+         
+<SCRIPT src="http://0.0.0.0/Common/js/libs/pharmart-1.0.js?20150212113726" type="text/javascript"></SCRIPT>
+     
+<SCRIPT type="text/javascript">
+        $(function () {
+            PharMart.SummaryDispFlg = $("#" + "ctl00_ValidationSummaryDispFlg");
+            PharMart.readyfunction.ShowMsg($("#" + "CommonValidationSummary"));
+        });
+    </SCRIPT>
+     
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001"></HEAD> 
+<BODY onkeydown="return PharMart.readyfunction.ControlKeyDown();">
+<FORM name="aspnetForm" id="aspnetForm" action="Login.aspx" enctype="multipart/form-data" 
+method="post">
+<DIV><INPUT name="__EVENTTARGET" id="__EVENTTARGET" type="hidden"> <INPUT name="__EVENTARGUMENT" id="__EVENTARGUMENT" type="hidden"> 
+<INPUT name="__SPLETSVSTATE" id="__SPLETSVSTATE" type="hidden" value="H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Iv7vX/M3nf2mv26y/WD/4ae7O/sPHv6mv82v9Qt+l9cvn5++ef37vz758uXp09//9enr12dfvvj959fVTxeLapb/tr/2r/uZNnn2XdPq6dnrl2cvnn1pm/9ep7/P3ZNqsaiWd59XF4X+O86a1bu9v+LHfo1f89f4NX6N/5se/MTzG/1a9M/x61WZt80o/cm8bopq+dnu+N740/G9ewcPPh2lJ+uyXdf5Z8t83dZZOUpfridlMf298us31dt8+dlyXZa/LuD97gJm/KT4wbOr8ef5Mqfm4yfrpljmTXNSLdt82TYJtfz1p4vZcX3R/IYL+iK7yJ8XTfsbTrXBF9kqPZ401Ne07b78Sf5uhca/22ADD+JwI6+rH7eNsiY3DehzH9BgGw/O7zLU5m1+DRgfDX1fTX46n7Zo8uv9Or/2r0P/+7V/7V/7FwaU/EIwMT9PqrKkN2ieMHe/0+vrps0XY/dpM/521szbbFLmBwGc03fTfCUtDEWOVyuaygwf2m+BCiB/U0h8U3B+u8iXZ0B28AuATH7s16Z/f+zXCX/1Pkx+Xfx+SyTB5r9OSaB/7Riqx3WdXZuOf+zH0BZdbBzVrw8cnlfZ7BnxRlX/+iqCvwHJ8Cqr8/o3Q8sTEv+XdXVZzPL6N8AHr4sf5L8OSWDz6/1kVq7z5tf4NX7tX/vX+HV/3d/wN4j1dWZg/W6xL3vw/7ufOPg9fg2mDBMJ8vpjvyHG8mMDY7HDRvtf7/cv6Pvm1/39G0LxN/j9L2U4v+6v8Wv8Br/Bj/1GqnTw/GaJ+eU3NL+Yr3/DX/fXXtdl/uv+mFV9v+6vW0KL/Ta/1vlvOvttfq1f69e2//46v9avqb/jxy/4jd5k9UVO8t621OfvPG3LnZ3f/4usWKrA/f6sDOXrGV6id379nyyagiZiPpv9PwEAAP//RvWhZZcFAAA="> 
+<INPUT name="__VIEWSTATE" id="__VIEWSTATE" type="hidden"> </DIV>
+<SCRIPT type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</SCRIPT>
+ 
+<SCRIPT src="http://0.0.0.0/Common/WebResource.axd?d=34SvmRfBOlk3G-nQQ7j8wEiLC-unk827AKtfp2YjyImPModn6eXE5_N34CSVC2etltEdwSR3ExUdZOgNJmvjtwi9rVJ4TJoSlekdEMrcaGs1&amp;t=635459770891623185" type="text/javascript"></SCRIPT>
+ 
+<DIV><INPUT name="__PREVIOUSPAGE" id="__PREVIOUSPAGE" type="hidden" value="G1tqU6tEg4E_fyQD8lspDBC-CqeYORnhOcSHYGS4RPhK9uSprmG-kUh9OldUu8mdC24Ogm4TZZ-ZN0x2odApjyx9mhePuxYbTHssGJF0IbtbHY7H1h9yj7CpSYkbz0AW0"> 
+</DIV>
+<DIV class="validation_summary" id="CommonValidationSummary" style="color: red; display: none;"></DIV>
+<DIV id="wrapper">
+<DIV id="main">
+<DIV id="ctl00_MainContent_LoginPanel">
+<H2 class="form_title">ログイン情報入力</H2>
+<DL class="login_form">
+  <DT>ID：</DT>
+  <DD><INPUT name="ctl00$MainContent$ShaCd" id="ctl00_MainContent_ShaCd" style="width: 300px;" type="text" maxlength="30"></DD>
+  <DT>パスワード：</DT>
+  <DD><INPUT name="ctl00$MainContent$Pwd" id="ctl00_MainContent_Pwd" style="width: 300px;" type="password" maxlength="50" targetbutton="ctl00_MainContent_LoginButton"></DD></DL>
+<DIV class="button_area"><INPUT name="ctl00$MainContent$LoginButton" class="bt bt_blue" id="ctl00_MainContent_LoginButton" type="submit" value="ログイン"> 
+                    <BR>
+<P><A id="ctl00_MainContent_ChangePassword" href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$MainContent$ChangePassword", "", false, "", "ChangePassword.aspx", false, true))'>パスワードを変更したい方はこちら</A> 
+                    
+</P></DIV></DIV><INPUT name="ctl00$MainContent$AlertDispFlg" id="ctl00_MainContent_AlertDispFlg" type="hidden"> 
+        </DIV></DIV><INPUT name="ctl00$ValidationSummaryDispFlg" id="ctl00_ValidationSummaryDispFlg" type="hidden" value="0"> 
+        
+<DIV id="blockLayer"><IMG id="Loader" style="border-width: 0px;" src="http://0.0.0.0/Common/img/common/loader.gif"> 
+        </DIV>
+<SCRIPT type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("CommonValidationSummary"));
+//]]>
+</SCRIPT>
+ 
+<SCRIPT type="text/javascript">
+//<![CDATA[
+var CommonValidationSummary = document.all ? document.all["CommonValidationSummary"] : document.getElementById("CommonValidationSummary");
+CommonValidationSummary.displaymode = "List";
+//]]>
+</SCRIPT>
+ </FORM></BODY></HTML>
