@@ -15,7 +15,7 @@ href="CHRONUS_jsp.files/style.css">
 
 <SCRIPT language=JavaScript>
 <!--
-// ŒxŒã‚Ì’l‚ÌÝ’è‚ðs‚¤B
+// è­¦å‘Šå¾Œã®å€¤ã®è¨­å®šã‚’è¡Œã†ã€‚
 function setTextValueAfterAlert(flg ,obj, keeperIndex){
 		if(keeperIndex==null){
 			keeperIndex="";
@@ -33,9 +33,9 @@ function setTextValueAfterAlert(flg ,obj, keeperIndex){
 }
 
 /**
- * ‹@    ”\FƒGƒ‰[ƒ_ƒCƒAƒƒO‚ª‚ ‚ê‚ÎA§Œä‚ðs‚¤B		                          
- * ˆø    ”F                        
- * –ß ‚è ’lFtrue §Œä‚·‚é@false@§Œä‚µ‚È‚¢
+ * æ©Ÿ    èƒ½ï¼šã‚¨ãƒ©ãƒ¼ãƒ€ã‚¤ã‚¢ãƒ­ã‚°ãŒã‚ã‚Œã°ã€åˆ¶å¾¡ã‚’è¡Œã†ã€‚		                          
+ * å¼•    æ•°ï¼š                        
+ * æˆ» ã‚Š å€¤ï¼štrue åˆ¶å¾¡ã™ã‚‹ã€€falseã€€åˆ¶å¾¡ã—ãªã„
  */
 var runtimes = 0;
 function haveAlert() {
@@ -46,9 +46,9 @@ function haveAlert() {
 	}
 }
 /**                       
- * ‹@    ”\F[ŽÐˆõ”Ô†]‚ðŒŸ¸‚·‚é                                       
- * @param:  frmName@ƒtƒH[ƒ€–¼ @obj@ƒRƒ“ƒgƒ[ƒ‹  maxLength “ü—Í‚Å‚«‚éŒ…”               
- * @returnFtrue:³í  false:ˆÙí                            
+ * æ©Ÿ    èƒ½ï¼š[ç¤¾å“¡ç•ªå·]ã‚’æ¤œæŸ»ã™ã‚‹                                       
+ * @param:  frmNameã€€ãƒ•ã‚©ãƒ¼ãƒ å ã€€objã€€ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«  maxLength å…¥åŠ›ã§ãã‚‹æ¡æ•°               
+ * @returnï¼štrue:æ­£å¸¸  false:ç•°å¸¸                            
  */
 function checkPersonCode(frmName,obj,maxLength){
 	document.FORM_COMMON.HaveAlert.value="have";
@@ -58,7 +58,7 @@ function checkPersonCode(frmName,obj,maxLength){
 	      document.FORM_COMMON.HaveAlert.value="";
 		return true;
 	}
-	//”¼Šp‰p”Žš‚ðƒ`ƒFƒbƒN
+	//åŠè§’è‹±æ•°å­—ã‚’ãƒã‚§ãƒƒã‚¯
 	if (checkEnglishOrNumber(inStr) == false) {		
 		alert(makeupMessage("ZZ00E011", getValue("PersonCode")));
 		obj.value = "";
@@ -66,7 +66,7 @@ function checkPersonCode(frmName,obj,maxLength){
 		document.FORM_COMMON.HaveAlert.value="";
 		return false;
 	}
-	//“ü—ÍÅ‘å•¶Žš”‚ð’´‚¦‚Ä‚¢‚È‚¢B
+	//å…¥åŠ›æœ€å¤§æ–‡å­—æ•°ã‚’è¶…ãˆã¦ã„ãªã„ã€‚
 	nFinalLength = getStringLength(inStr);
 	if (nFinalLength > maxLength) {
 		alert(makeupMessage("ZZ00E013", getValue("PersonCode")));
@@ -76,9 +76,9 @@ function checkPersonCode(frmName,obj,maxLength){
 		return false;
 	}
 	
-	//‰pŽš¬•¶Žš‚ð‰pŽš‘å•¶Žš‚É•ÏŠ·‚·‚éB
+	//è‹±å­—å°æ–‡å­—ã‚’è‹±å­—å¤§æ–‡å­—ã«å¤‰æ›ã™ã‚‹ã€‚
 	obj.value = obj.value.toUpperCase();
-	//Œ…”‚ª•s‘«‚Ìê‡æ“ª‚©‚ç0‚Å–„‚ß‚ÄA‹K’è‚ÌŒ…”‚É“ü—Í’l‚ð•â®‚·‚éB
+	//æ¡æ•°ãŒä¸è¶³ã®å ´åˆå…ˆé ­ã‹ã‚‰0ã§åŸ‹ã‚ã¦ã€è¦å®šã®æ¡æ•°ã«å…¥åŠ›å€¤ã‚’è£œæ•´ã™ã‚‹ã€‚
 	if(obj.value.length < maxLength) {
 		var newFlen = maxLength - obj.value.length;
 		for(i=0;i<newFlen;i++) {
@@ -100,13 +100,13 @@ function fnCheckPersonCode(frmName,obj,maxLength){
 
 }
 
-//ÎÞÀÝ‚ð‰Ÿ‰º‚·‚é
+//ï¾Žï¾žï¾€ï¾ã‚’æŠ¼ä¸‹ã™ã‚‹
 function doLabel(aimLabel) {
 	if ( runtimes!=0 ) {
 		return false;
 	}
 	
-	//Œx‚ª‚ ‚ê‚ÎA§Œä‚ðs‚¤B
+	//è­¦å‘ŠãŒã‚ã‚Œã°ã€åˆ¶å¾¡ã‚’è¡Œã†ã€‚
     if (haveAlert() == true) {
      return false;
     }
@@ -134,17 +134,17 @@ function getValue(keyStr){
 }
 
 /**                       
- * ‹@    ”\F‰æ–ÊƒIƒuƒWƒFƒNƒg‚ðŽæ“¾‚·‚é                                         
- * @param: frmName@ƒtƒH[ƒ€–¼   objName ƒRƒ“ƒgƒ[ƒ‹–¼                                        
- * @returnF‰æ–ÊƒIƒuƒWƒFƒNƒg                               
+ * æ©Ÿ    èƒ½ï¼šç”»é¢ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å–å¾—ã™ã‚‹                                         
+ * @param: frmNameã€€ãƒ•ã‚©ãƒ¼ãƒ å   objName ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«å                                        
+ * @returnï¼šç”»é¢ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ                               
  */  
 function getObject(frmName, objName) {
 	return eval("document." + frmName + "." + objName);
 }
 
-// ADD 2010/06/20 COMTURE ‘å‹K–Íƒeƒ“ƒvƒŒ[ƒg#1F•¡”–@lƒZƒLƒ…ƒŠƒeƒB‘Î‰ž START
+// ADD 2010/06/20 COMTURE å¤§è¦æ¨¡ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ#1ï¼šè¤‡æ•°æ³•äººã‚»ã‚­ãƒ¥ãƒªãƒ†ã‚£å¯¾å¿œ START
 /**
- * ‘Åƒ{ƒ^ƒ“‰Ÿ‰ºŽž‚Ìˆ—
+ * æ‰“åˆ»ãƒœã‚¿ãƒ³æŠ¼ä¸‹æ™‚ã®å‡¦ç†
  */
 function terminal(terminalUrl) {
     var companyIdList = document.FORM_COMMON.companyIdList;
@@ -168,20 +168,20 @@ function terminal(terminalUrl) {
     
     return false;
 }
-// ADD 2010/06/20 COMTURE ‘å‹K–Íƒeƒ“ƒvƒŒ[ƒg#1F•¡”–@lƒZƒLƒ…ƒŠƒeƒB‘Î‰ž END
+// ADD 2010/06/20 COMTURE å¤§è¦æ¨¡ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ#1ï¼šè¤‡æ•°æ³•äººã‚»ã‚­ãƒ¥ãƒªãƒ†ã‚£å¯¾å¿œ END
 // Used Jave Script-->
 </SCRIPT>
 
-<FORM name=messages><INPUT type=hidden value=ZZ01E010F{0}‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B 
-name=ZZ01E010><INPUT type=hidden value=ZZ00E011F{0}‚Í”¼Šp‰p”Žš‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B 
-name=ZZ00E011><INPUT type=hidden value=ZZ00E013F{0}‚ÍA”¼Šp{1}Œ…ˆÈ“à‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B 
+<FORM name=messages><INPUT type=hidden value=ZZ01E010ï¼š{0}ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚ 
+name=ZZ01E010><INPUT type=hidden value=ZZ00E011ï¼š{0}ã¯åŠè§’è‹±æ•°å­—ã§å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚ 
+name=ZZ00E011><INPUT type=hidden value=ZZ00E013ï¼š{0}ã¯ã€åŠè§’{1}æ¡ä»¥å†…ã§å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚ 
 name=ZZ00E013></FORM>
-<FORM name=values><INPUT type=hidden value=ŽÐˆõ”Ô† name=PersonCode></FORM>
+<FORM name=values><INPUT type=hidden value=ç¤¾å“¡ç•ªå· name=PersonCode></FORM>
 <FORM method=post name=FORM_COMMON action=/Lysithea/Logon><INPUT type=hidden 
 name=LabelName><INPUT type=hidden name=HaveAlert><INPUT type=hidden 
-value=ZZ01E010F{0}‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B name=ZZ01E010><INPUT type=hidden 
-value=ZZ00E011F{0}‚Í”¼Šp‰p”Žš‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B name=ZZ00E011><INPUT type=hidden 
-value=ZZ00E013F{0}‚ÍA”¼Šp{1}Œ…ˆÈ“à‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B name=ZZ00E013><!-- ƒGƒ‰[ˆ— -->
+value=ZZ01E010ï¼š{0}ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚ name=ZZ01E010><INPUT type=hidden 
+value=ZZ00E011ï¼š{0}ã¯åŠè§’è‹±æ•°å­—ã§å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚ name=ZZ00E011><INPUT type=hidden 
+value=ZZ00E013ï¼š{0}ã¯ã€åŠè§’{1}æ¡ä»¥å†…ã§å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚ name=ZZ00E013><!-- ã‚¨ãƒ©ãƒ¼å‡¦ç† -->
 <META name=GENERATOR content="MSHTML 11.00.9600.19101"></HEAD>
 <BODY bgColor=khaki>
 <TABLE height=60 cellSpacing=0 cellPadding=0 width="90%" align=center 
@@ -194,32 +194,32 @@ value=ZZ00E013F{0}‚ÍA”¼Šp{1}Œ…ˆÈ“à‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B name=ZZ00E013><!-- ƒGƒ‰
           <TD vAlign=top width=10 noWrap><IMG 
             src="CHRONUS_jsp.files/10by35penetration.gif" width=10 height=35></TD>
           <TD noWrap><IMG src="CHRONUS_jsp.files/5by35penetration.gif" width=1 
-            height=35> <NOBR class=kinoutitle>ƒƒOƒIƒ“</NOBR> 
+            height=35> <NOBR class=kinoutitle>ãƒ­ã‚°ã‚ªãƒ³</NOBR> 
 </TD></TR></TBODY></TABLE></TD>
     <TD class=title vAlign=bottom width="50%" noWrap align=right><IMG 
-      src="CHRONUS_jsp.files/logo.gif" width=151 height=51> </TD></TR></TBODY></TABLE><!-- ƒGƒ‰[ˆ—--><BR><BR><BR>
+      src="CHRONUS_jsp.files/logo.gif" width=151 height=51> </TD></TR></TBODY></TABLE><!-- ã‚¨ãƒ©ãƒ¼å‡¦ç†--><BR><BR><BR>
 <CENTER>
-<TABLE border=0 NOWRAP><!-- –@lƒIƒvƒVƒ‡ƒ“s-->
+<TABLE border=0 NOWRAP><!-- æ³•äººã‚ªãƒ—ã‚·ãƒ§ãƒ³è¡Œ-->
   <TBODY>
   <TR>
-    <TD class=HdCelL noWrap>–@l</TD>
+    <TD class=HdCelL noWrap>æ³•äºº</TD>
     <TD class=HdCelS><SELECT class=InputSelect name=CompanyID> <OPTION 
-        value=Company_4>100FTISŠ”Ž®‰ïŽÐ</OPTION> <OPTION 
-        value=Company_3>300FŠ”Ž®‰ïŽÐƒAƒOƒŒƒbƒNƒX</OPTION> <OPTION 
-        value=Company_19>301FŠ”Ž®‰ïŽÐƒAƒOƒŒƒbƒNƒX(Œð‘Ö‹Î–±)</OPTION> <OPTION selected 
-        value=Company_8>A01FƒNƒIƒŠƒJŠ”Ž®‰ïŽÐ</OPTION> <OPTION 
-        value=Company_5>B01FTISƒVƒXƒeƒ€ƒT[ƒrƒXŠ”Ž®‰ïŽÐ</OPTION> <OPTION 
-        value=Company_17>C01FITƒT[ƒrƒXƒtƒH[ƒXŠ”Ž®‰ïŽÐ</OPTION> <OPTION 
-        value=Company_15>E01FTIS“Œ–kŠ”Ž®‰ïŽÐ</OPTION> <OPTION 
-        value=Company_7>F01FAJSŠ”Ž®‰ïŽÐ</OPTION> <OPTION 
-        value=Company_6>G01FƒlƒIƒAƒNƒVƒXŠ”Ž®‰ïŽÐ</OPTION> <OPTION 
-        value=Company_18>H01FTIS–kŠC“¹Š”Ž®‰ïŽÐ</OPTION> <OPTION 
-        value=Company_9>I01FITHDŠ”Ž®‰ïŽÐ</OPTION> <OPTION 
-        value=Company_12>M01FTISƒ\ƒŠƒ…[ƒVƒ‡ƒ“ƒŠƒ“ƒN(Š”)(‹ŒTFM)</OPTION> <OPTION 
-        value=Company_16>N01FTIS’·–ìŠ”Ž®‰ïŽÐ</OPTION> <OPTION 
-        value=Company_14>S01FTISƒ\ƒŠƒ…[ƒVƒ‡ƒ“ƒŠƒ“ƒNŠ”Ž®‰ïŽÐ</OPTION> <OPTION 
-        value=Company_11>T01FTISƒg[ƒ^ƒ‹ƒT[ƒrƒXŠ”Ž®‰ïŽÐ</OPTION> <OPTION 
-        value=Company_13>W01FTIS¼“ú–{Š”Ž®‰ïŽÐ</OPTION></SELECT> <INPUT type=hidden 
+        value=Company_4>100ï¼šTISæ ªå¼ä¼šç¤¾</OPTION> <OPTION 
+        value=Company_3>300ï¼šæ ªå¼ä¼šç¤¾ã‚¢ã‚°ãƒ¬ãƒƒã‚¯ã‚¹</OPTION> <OPTION 
+        value=Company_19>301ï¼šæ ªå¼ä¼šç¤¾ã‚¢ã‚°ãƒ¬ãƒƒã‚¯ã‚¹(äº¤æ›¿å‹¤å‹™)</OPTION> <OPTION selected 
+        value=Company_8>A01ï¼šã‚¯ã‚ªãƒªã‚«æ ªå¼ä¼šç¤¾</OPTION> <OPTION 
+        value=Company_5>B01ï¼šTISã‚·ã‚¹ãƒ†ãƒ ã‚µãƒ¼ãƒ“ã‚¹æ ªå¼ä¼šç¤¾</OPTION> <OPTION 
+        value=Company_17>C01ï¼šITã‚µãƒ¼ãƒ“ã‚¹ãƒ•ã‚©ãƒ¼ã‚¹æ ªå¼ä¼šç¤¾</OPTION> <OPTION 
+        value=Company_15>E01ï¼šTISæ±åŒ—æ ªå¼ä¼šç¤¾</OPTION> <OPTION 
+        value=Company_7>F01ï¼šAJSæ ªå¼ä¼šç¤¾</OPTION> <OPTION 
+        value=Company_6>G01ï¼šãƒã‚ªã‚¢ã‚¯ã‚·ã‚¹æ ªå¼ä¼šç¤¾</OPTION> <OPTION 
+        value=Company_18>H01ï¼šTISåŒ—æµ·é“æ ªå¼ä¼šç¤¾</OPTION> <OPTION 
+        value=Company_9>I01ï¼šITHDæ ªå¼ä¼šç¤¾</OPTION> <OPTION 
+        value=Company_12>M01ï¼šTISã‚½ãƒªãƒ¥ãƒ¼ã‚·ãƒ§ãƒ³ãƒªãƒ³ã‚¯(æ ª)(æ—§TFM)</OPTION> <OPTION 
+        value=Company_16>N01ï¼šTISé•·é‡Žæ ªå¼ä¼šç¤¾</OPTION> <OPTION 
+        value=Company_14>S01ï¼šTISã‚½ãƒªãƒ¥ãƒ¼ã‚·ãƒ§ãƒ³ãƒªãƒ³ã‚¯æ ªå¼ä¼šç¤¾</OPTION> <OPTION 
+        value=Company_11>T01ï¼šTISãƒˆãƒ¼ã‚¿ãƒ«ã‚µãƒ¼ãƒ“ã‚¹æ ªå¼ä¼šç¤¾</OPTION> <OPTION 
+        value=Company_13>W01ï¼šTISè¥¿æ—¥æœ¬æ ªå¼ä¼šç¤¾</OPTION></SELECT> <INPUT type=hidden 
       value=Company_4 name=companyIdList> <INPUT type=hidden value=100 
       name=companyCodeList> <INPUT type=hidden value=Company_3 
       name=companyIdList> <INPUT type=hidden value=300 name=companyCodeList> 
@@ -244,22 +244,22 @@ value=ZZ00E013F{0}‚ÍA”¼Šp{1}Œ…ˆÈ“à‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B name=ZZ00E013><!-- ƒGƒ‰
       <INPUT type=hidden value=Company_11 name=companyIdList> <INPUT type=hidden 
       value=T01 name=companyCodeList> <INPUT type=hidden value=Company_13 
       name=companyIdList> <INPUT type=hidden value=W01 name=companyCodeList> </TD>
-    <TD><BR></TD></TR><!-- ‘æ“ñs-->
+    <TD><BR></TD></TR><!-- ç¬¬äºŒè¡Œ-->
   <TR>
-    <TD class=HdCelL noWrap>ŽÐˆõ”Ô†</TD>
+    <TD class=HdCelL noWrap>ç¤¾å“¡ç•ªå·</TD>
     <TD class=HdCelS><INPUT 
       onblur="JavaScript:return fnCheckPersonCode('FORM_COMMON',PersonCode,9);" 
       class=InputTxtL maxLength=9 size=19 name=PersonCode><INPUT type=hidden 
       name=PersonCodeKeeper></TD>
     <TD><BR></TD></TR>
-  <TR><!-- ‘æŽOs-->
-    <TD class=HdCelL noWrap>ƒpƒXƒ[ƒh</TD>
+  <TR><!-- ç¬¬ä¸‰è¡Œ-->
+    <TD class=HdCelL noWrap>ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰</TD>
     <TD class=HdCelS><INPUT class=InputTxtL maxLength=30 size=19 type=password 
       name=Password></TD>
-    <TD><BR></TD></TR></TBODY></TABLE><BR><BR><!-- ‘æŽls--><NOBR><A 
+    <TD><BR></TD></TR></TBODY></TABLE><BR><BR><!-- ç¬¬å››è¡Œ--><NOBR><A 
 onclick="doLabel('LOGON');return false;" 
 href="https://chronus-int.tis.co.jp/Lysithea/JSP_Files/authentication/"><IMG 
-border=0 src="CHRONUS_jsp.files/logon.jpg"></A> </NOBR></CENTER><!-- ‘æŒÜs@Œ©o-->
+border=0 src="CHRONUS_jsp.files/logon.jpg"></A> </NOBR></CENTER><!-- ç¬¬äº”è¡Œã€€è¦‹å‡º-->
 <CENTER></CENTER></FORM>
 <SCRIPT language=JavaScript>
 <!--
@@ -267,3 +267,4 @@ border=0 src="CHRONUS_jsp.files/logon.jpg"></A> </NOBR></CENTER><!-- ‘æŒÜs@Œ©
 // Used Jave Script-->
 </SCRIPT>
 </BODY></HTML>
+	    
