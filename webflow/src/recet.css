@@ -1,0 +1,153 @@
+html {
+	-webkit-text-size-adjust: none;
+}
+body {
+	margin: 0px; padding: 0px;
+}
+div {
+	margin: 0px; padding: 0px;
+}
+dl {
+	margin: 0px; padding: 0px;
+}
+dt {
+	margin: 0px; padding: 0px;
+}
+dd {
+	margin: 0px; padding: 0px;
+}
+ul {
+	margin: 0px; padding: 0px;
+}
+ol {
+	margin: 0px; padding: 0px;
+}
+li {
+	margin: 0px; padding: 0px;
+}
+h1 {
+	margin: 0px; padding: 0px;
+}
+h2 {
+	margin: 0px; padding: 0px;
+}
+h3 {
+	margin: 0px; padding: 0px;
+}
+h4 {
+	margin: 0px; padding: 0px;
+}
+h5 {
+	margin: 0px; padding: 0px;
+}
+h6 {
+	margin: 0px; padding: 0px;
+}
+pre {
+	margin: 0px; padding: 0px;
+}
+form {
+	margin: 0px; padding: 0px;
+}
+fieldset {
+	margin: 0px; padding: 0px;
+}
+p {
+	margin: 0px; padding: 0px;
+}
+blockquote {
+	margin: 0px; padding: 0px;
+}
+th {
+	margin: 0px; padding: 0px;
+}
+td {
+	margin: 0px; padding: 0px;
+}
+address {
+	font-style: normal;
+}
+caption {
+	font-style: normal;
+}
+cite {
+	font-style: normal;
+}
+code {
+	font-style: normal;
+}
+dfn {
+	font-style: normal;
+}
+em {
+	font-style: normal;
+}
+strong {
+	font-style: normal;
+}
+th {
+	font-style: normal;
+}
+var {
+	font-style: normal;
+}
+object {
+	vertical-align: top;
+}
+embed {
+	vertical-align: top;
+}
+h1 {
+	font-size: 100%; font-weight: normal;
+}
+h2 {
+	font-size: 100%; font-weight: normal;
+}
+h3 {
+	font-size: 100%; font-weight: normal;
+}
+h4 {
+	font-size: 100%; font-weight: normal;
+}
+h5 {
+	font-size: 100%; font-weight: normal;
+}
+h6 {
+	font-size: 100%; font-weight: normal;
+}
+img {
+	border: 0px currentColor; border-image: none;
+}
+abbr {
+	border: 0px currentColor; border-image: none;
+}
+acronym {
+	border: 0px currentColor; border-image: none;
+}
+fieldset {
+	border: 0px currentColor; border-image: none;
+}
+button {
+	padding: 0px; cursor: pointer;
+}
+button img {
+	vertical-align: bottom;
+}
+li {
+	list-style-type: none;
+}
+hr {
+	border-width: 0px 0px 1px; border-style: solid; border-color: rgb(255, 255, 255) rgb(255, 255, 255) rgb(204, 204, 204); border-image: none;
+}
+.header::after {
+	height: 0px; overflow: hidden; clear: both; display: block; visibility: hidden; content: "";
+}
+.g_menu::after {
+	height: 0px; overflow: hidden; clear: both; display: block; visibility: hidden; content: "";
+}
+.header {
+	overflow: hidden; -ms-zoom: 1;
+}
+.g_menu {
+	overflow: hidden; -ms-zoom: 1;
+}
