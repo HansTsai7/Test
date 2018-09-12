@@ -1,0 +1,186 @@
+.jap9 {
+	
+}
+.jap10 {
+	
+}
+.jap12 {
+	
+}
+.jap14 {
+	
+}
+.jap18 {
+	
+}
+.jap24 {
+	
+}
+.japMENU {
+	
+}
+.japMENU12 {
+	
+}
+.enp9 {
+	
+}
+.enp10 {
+	
+}
+.enp12 {
+	
+}
+.enp14 {
+	
+}
+.enp18 {
+	
+}
+.enp24 {
+	
+}
+.enpMENU {
+	
+}
+.enpMENU12 {
+	
+}
+.ja1 {
+	
+}
+.ja2 {
+	
+}
+.ja3 {
+	
+}
+.ja4 {
+	
+}
+.ja5 {
+	
+}
+.ja6 {
+	
+}
+.en1 {
+	
+}
+.en2 {
+	
+}
+.en3 {
+	
+}
+.en4 {
+	
+}
+.en5 {
+	
+}
+.en6 {
+	
+}
+a:link {
+	color: rgb(44, 91, 177); text-decoration: none;
+}
+a:visited {
+	color: rgb(22, 11, 126); text-decoration: none;
+}
+a:active {
+	color: rgb(0, 51, 153); text-decoration: none;
+}
+a:hover {
+	color: rgb(80, 132, 255); text-decoration: none;
+}
+body {
+	margin: 0px; padding: 0px; text-align: left; color: rgb(102, 102, 102); vertical-align: top;
+}
+table.main {
+	width: 768px;
+}
+td {
+	white-space: nowrap;
+}
+td.valign-top {
+	vertical-align: top;
+}
+td.valign-center {
+	vertical-align: middle;
+}
+td.valign-bottom {
+	vertical-align: bottom;
+}
+td.align-right {
+	text-align: right;
+}
+td.align-center {
+	text-align: center;
+}
+.heightMax {
+	vertical-align: 100%;
+}
+.bold {
+	font-weight: bold;
+}
+.orangeFF9900 {
+	color: rgb(255, 153, 0);
+}
+.whiteFFFFFF {
+	color: rgb(255, 255, 255);
+}
+.blue174477 {
+	color: rgb(23, 68, 119);
+}
+.blue125bae {
+	color: rgb(18, 91, 174);
+}
+td.bgFFFFFF {
+	background-color: rgb(255, 255, 255);
+}
+td.bgCCCCCC {
+	background-color: rgb(255, 255, 255);
+}
+td.bgCCCCCC {
+	background-color: rgb(204, 204, 204);
+}
+td.bgDDDDDD {
+	background-color: rgb(221, 221, 221);
+}
+td.bg999999 {
+	background-color: rgb(153, 153, 153);
+}
+td.bgd3d3d3 {
+	background-color: rgb(211, 211, 211);
+}
+td.bgffffff {
+	background-color: rgb(255, 255, 255);
+}
+td.bgbfc3c9 {
+	background-color: rgb(191, 195, 201);
+}
+form {
+	margin: 0px;
+}
+textarea#write {
+	border: 1px solid rgb(204, 204, 204); border-image: none;
+}
+input#write {
+	border: 1px solid rgb(204, 204, 204); border-image: none;
+}
+.textRED {
+	color: rgb(204, 51, 0); font-weight: bold;
+}
+.rrightbg {
+	background-image: none; background-repeat: repeat-y;
+}
+.rbottombg {
+	background-image: none; background-repeat: repeat-x;
+}
+span {
+	white-space: nowrap;
+}
+.arrangeTextForSpace {
+	margin: 0px; padding: 0px; width: 100px; overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; -moz-binding: url(/sd/javax.faces.resource/css/ellipsis.xml.jsf#ellipsis);
+}

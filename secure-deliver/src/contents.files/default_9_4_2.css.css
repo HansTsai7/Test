@@ -1,0 +1,87 @@
+* {
+	margin: 0px; padding: 0px;
+}
+address {
+	font-style: normal;
+}
+caption {
+	font-style: normal;
+}
+cite {
+	font-style: normal;
+}
+code {
+	font-style: normal;
+}
+dfn {
+	font-style: normal;
+}
+em {
+	font-style: normal;
+}
+strong {
+	font-style: normal;
+}
+th {
+	font-style: normal;
+}
+var {
+	font-style: normal;
+}
+table {
+	border-collapse: collapse; border-spacing: 0;
+}
+caption {
+	text-align: left;
+}
+th {
+	text-align: left;
+}
+q::before {
+	content: "";
+}
+q::after {
+	content: "";
+}
+object {
+	vertical-align: top;
+}
+embed {
+	vertical-align: top;
+}
+hr {
+	display: none;
+}
+legend {
+	display: none;
+}
+img {
+	border: 0px currentColor; border-image: none;
+}
+abbr {
+	border: 0px currentColor; border-image: none;
+}
+acronym {
+	border: 0px currentColor; border-image: none;
+}
+fieldset {
+	border: 0px currentColor; border-image: none;
+}
+li {
+	list-style-type: none;
+}
+body {
+	text-align: center; color: rgb(51, 51, 51); line-height: 1.4; font-size: 75%; vertical-align: top;
+}
+a:link {
+	color: rgb(44, 91, 177); text-decoration: none;
+}
+a:visited {
+	color: rgb(22, 11, 126); text-decoration: none;
+}
+a:active {
+	color: rgb(0, 51, 153); text-decoration: none;
+}
+a:hover {
+	color: rgb(80, 132, 255); text-decoration: none;
+}

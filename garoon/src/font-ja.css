@@ -1,0 +1,78 @@
+body {
+	font-family: "ƒqƒ‰ƒMƒmŠpƒS Pro W3","Hiragino Kaku Gothic Pro","MS PGothic","‚l‚r ‚oƒSƒVƒbƒN",sans-serif;
+}
+pre {
+	font-family: "ƒqƒ‰ƒMƒmŠpƒS Pro W3","Hiragino Kaku Gothic Pro","MS Gothic","‚l‚r ƒSƒVƒbƒN",monospace;
+}
+input {
+	font-family: "ƒqƒ‰ƒMƒmŠpƒS Pro W3","Hiragino Kaku Gothic Pro","MS PGothic","‚l‚r ‚oƒSƒVƒbƒN",sans-serif;
+}
+button {
+	font-family: "ƒqƒ‰ƒMƒmŠpƒS Pro W3","Hiragino Kaku Gothic Pro","MS PGothic","‚l‚r ‚oƒSƒVƒbƒN",sans-serif;
+}
+textarea {
+	font-family: "ƒqƒ‰ƒMƒmŠpƒS Pro W3","Hiragino Kaku Gothic Pro","MS Gothic","‚l‚r ƒSƒVƒbƒN",monospace;
+}
+select {
+	font-family: "ƒqƒ‰ƒMƒmŠpƒS Pro W3","Hiragino Kaku Gothic Pro","MS Gothic","‚l‚r ƒSƒVƒbƒN",monospace;
+}
+.bold {
+	font-family: "ƒqƒ‰ƒMƒmŠpƒS Pro W3","Hiragino Kaku Gothic Pro","MS PGothic","‚l‚r ‚oƒSƒVƒbƒN",sans-serif;
+}
+.font_red {
+	font-family: "ƒqƒ‰ƒMƒmŠpƒS Pro W3","Hiragino Kaku Gothic Pro","MS PGothic","‚l‚r ‚oƒSƒVƒbƒN",sans-serif;
+}
+.format_contents {
+	font-family: "ƒqƒ‰ƒMƒmŠpƒS Pro W3","Hiragino Kaku Gothic Pro","MS Gothic","‚l‚r ƒSƒVƒbƒN",monospace;
+}
+button.appmenu {
+	font-family: "ƒqƒ‰ƒMƒmŠpƒS Pro W3","Hiragino Kaku Gothic Pro","MS PGothic","‚l‚r ‚oƒSƒVƒbƒN",sans-serif;
+}
+#one_parts #action .company {
+	font-family: "ƒqƒ‰ƒMƒmŠpƒS Pro W3","Hiragino Kaku Gothic Pro","MS Gothic","‚l‚r ƒSƒVƒbƒN",monospace;
+}
+.company {
+	font-family: "ƒqƒ‰ƒMƒmŠpƒS Pro W3","Hiragino Kaku Gothic Pro","MS Gothic","‚l‚r ƒSƒVƒbƒN",monospace;
+}
+#setup_menu .items .title {
+	font-family: "ƒqƒ‰ƒMƒmŠpƒS Pro W3","Hiragino Kaku Gothic Pro","MS Gothic","‚l‚r ƒSƒVƒbƒN",monospace;
+}
+#setup_menu #focus {
+	font-family: "MS PGothic","‚l‚r ‚oƒSƒVƒbƒN",sans-serif;
+}
+#tree_structure #focus {
+	font-family: "ƒqƒ‰ƒMƒmŠpƒS Pro W3","Hiragino Kaku Gothic Pro","MS PGothic","‚l‚r ‚oƒSƒVƒbƒN",sans-serif;
+}
+.sub_title {
+	font-family: "ƒqƒ‰ƒMƒmŠpƒS Pro W3","Hiragino Kaku Gothic Pro","MS Gothic","‚l‚r ƒSƒVƒbƒN",monospace;
+}
+.day_navi .items .date {
+	font-family: "ƒqƒ‰ƒMƒmŠpƒS Pro W3","Hiragino Kaku Gothic Pro","MS PGothic","‚l‚r ‚oƒSƒVƒbƒN",sans-serif;
+}
+.day_navi .items .name {
+	font-family: "ƒqƒ‰ƒMƒmŠpƒS Pro W3","Hiragino Kaku Gothic Pro","MS PGothic","‚l‚r ‚oƒSƒVƒbƒN",sans-serif;
+}
+#one_category_menu .items .title {
+	font-family: "ƒqƒ‰ƒMƒmŠpƒS Pro W3","Hiragino Kaku Gothic Pro","MS Gothic","‚l‚r ƒSƒVƒbƒN",monospace;
+}
+#one_category_menu #focus {
+	font-family: "ƒqƒ‰ƒMƒmŠpƒS Pro W3","Hiragino Kaku Gothic Pro","MS PGothic","‚l‚r ‚oƒSƒVƒbƒN",sans-serif;
+}
+.button_bold {
+	font-family: "ƒqƒ‰ƒMƒmŠpƒS Pro W3","Hiragino Kaku Gothic Pro","MS PGothic","‚l‚r ‚oƒSƒVƒbƒN",sans-serif;
+}
+.input-text-outer-cybozu input {
+	font-family: "ƒƒCƒŠƒI",Meiryo,"Hiragino Kaku Gothic Pro","ƒqƒ‰ƒMƒmŠpƒS Pro W3","‚l‚r ‚oƒSƒVƒbƒN","Lucida Grande","Lucida Sans Unicode",Arial,Verdana,sans-serif;
+}
+.content_message_grn {
+	font-family: "ƒƒCƒŠƒI",Meiryo,"Hiragino Kaku Gothic Pro","ƒqƒ‰ƒMƒmŠpƒS Pro W3","‚l‚r ‚oƒSƒVƒbƒN","Lucida Grande","Lucida Sans Unicode",Arial,Verdana,sans-serif;
+}
+.m {
+	font-family: "ƒqƒ‰ƒMƒmŠpƒS Pro W3","Hiragino Kaku Gothic Pro",Arial,sans-serif;
+}
+.e {
+	font-family: "ƒqƒ‰ƒMƒmŠpƒS Pro W3","Hiragino Kaku Gothic Pro",Arial,sans-serif;
+}
+.a {
+	font-family: "ƒqƒ‰ƒMƒmŠpƒS Pro W3","Hiragino Kaku Gothic Pro",Arial,sans-serif;
+}
