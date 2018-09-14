@@ -1,0 +1,82 @@
+
+
+
+
+
+
+
+// supposing Common.jsp
+
+/**
+ * reference "messages" form, and return message for given id.
+ * supplement: string or Array(of string)
+ */
+function makeupMessage(msgID, supplement,aimFrm){
+	// get message
+	var msg = fnReplaceSpecialFonts(getObject("messages", msgID,aimFrm).value);
+	
+	// supplement
+	if(typeof(supplement) == "undefined"){
+		// nothing to do
+	}else if(typeof(supplement) == "string"){
+		// String
+		msg=replaceMsg(msg, supplement);
+	}else{
+		// Array, must not others
+		for(i=0; i<supplement.length; i++){
+			msg=replaceMsg(msg, supplement[i]);
+		}
+	}
+	
+	return msg;
+}
+
+//ここから PT不良対応 NO.BA1-0027  李偉利  2003/02/08 
+/**
+ * 機    能：エラーメッセージを組み			                          
+ * 引    数：msgEx エラー情報 　obj　Replace コントロール                              
+ * 戻 り 値：エラーメッセージ           
+ */
+function makeupMessageEx(msgEx, obj,index,aimFrm){			// Nozaki BP2-0218
+	// get message
+	var msg = fnReplaceSpecialFonts(msgEx);
+	
+	var itObj = getObject("values", obj.name,aimFrm);
+	
+	if (itObj == undefined) {
+		//Replace　コントロール が存在しない場合
+		return msg;
+	}
+	
+	var itLength = getObject("values", obj.name,aimFrm).length;
+
+	if(itLength == undefined){
+	//一つしかない場合
+		if(typeof(itObj.value) == "string") {
+			msg=replaceMsg(msg, itObj.value);
+		}
+	}else {
+		if (index == undefined) {						// Nozaki BP2-0218
+		//複数の場合
+			// Array, must not others
+			for(i=0; i<itLength; i++){
+				msg=replaceMsg(msg, itObj[i].value);
+			}
+		} else {										// Nozaki BP2-0218
+			msg=replaceMsg(msg, itObj[index].value);	// Nozaki BP2-0218
+		}												// Nozaki BP2-0218
+	}
+	
+	return msg;
+}
+
+//ここまで PT不良対応 NO.BA1-0027  李偉利  2003/02/08 
+
+
+/**
+ * reference "values" form, and return values for given id.
+ */
+function getValue(keyStr,aimFrm){
+	return getObject("values", keyStr,aimFrm).value;
+}
+
