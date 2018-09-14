@@ -1,0 +1,168 @@
+.en2ime {
+	WIDTH: 22px; IME-MODE: disabled
+}
+.en3ime {
+	WIDTH: 35px; IME-MODE: disabled
+}
+.en4ime {
+	WIDTH: 40px; IME-MODE: disabled
+}
+.en5ime {
+	WIDTH: 48px; IME-MODE: disabled
+}
+.en6ime {
+	WIDTH: 55px; IME-MODE: disabled
+}
+.en7ime {
+	WIDTH: 60px; IME-MODE: disabled
+}
+.en8ime {
+	WIDTH: 68px; IME-MODE: disabled
+}
+.en10ime {
+	WIDTH: 80px; IME-MODE: disabled
+}
+.en15ime {
+	WIDTH: 116px; IME-MODE: disabled
+}
+INPUT[type=text].en2ime {
+	WIDTH: 22px; IME-MODE: disabled
+}
+INPUT[type=text].en3ime {
+	WIDTH: 35px; IME-MODE: disabled
+}
+INPUT[type=text].en4ime {
+	WIDTH: 40px; IME-MODE: disabled
+}
+INPUT[type=text].en5ime {
+	WIDTH: 48px; IME-MODE: disabled
+}
+INPUT[type=text].en6ime {
+	WIDTH: 55px; IME-MODE: disabled
+}
+INPUT[type=text].en7ime {
+	WIDTH: 60px; IME-MODE: disabled
+}
+INPUT[type=text].en8ime {
+	WIDTH: 68px; IME-MODE: disabled
+}
+INPUT[type=text].en10ime {
+	WIDTH: 80px; IME-MODE: disabled
+}
+INPUT[type=text].en15ime {
+	WIDTH: 116px; IME-MODE: disabled
+}
+.em3ime {
+	WIDTH: 45px; IME-MODE: active
+}
+.em5ime {
+	WIDTH: 65px; IME-MODE: active
+}
+.em10ime {
+	WIDTH: 117px; IME-MODE: active
+}
+.em25ime {
+	WIDTH: 334px; IME-MODE: active
+}
+.em30ime {
+	WIDTH: 305px; IME-MODE: active
+}
+.em45ime {
+	WIDTH: 305px; IME-MODE: active
+}
+.em50ime {
+	WIDTH: 455px; IME-MODE: active
+}
+INPUT[type=text].em3ime {
+	WIDTH: 45px; IME-MODE: active
+}
+INPUT[type=text].em5ime {
+	WIDTH: 65px; IME-MODE: active
+}
+INPUT[type=text].em10ime {
+	WIDTH: 117px; IME-MODE: active
+}
+INPUT[type=text].em25ime {
+	WIDTH: 334px; IME-MODE: active
+}
+INPUT[type=text].em30ime {
+	WIDTH: 305px; IME-MODE: active
+}
+INPUT[type=text].em45ime {
+	WIDTH: 305px; IME-MODE: active
+}
+INPUT[type=text].em50ime {
+	WIDTH: 455px; IME-MODE: active
+}
+.em25limit {
+	WIDTH: 208px; IME-MODE: active
+}
+.em30limit {
+	WIDTH: 208px; IME-MODE: active
+}
+.em45limit {
+	WIDTH: 208px; IME-MODE: active
+}
+.em50limit {
+	WIDTH: 208px; IME-MODE: active
+}
+INPUT[type=text].em25limit {
+	WIDTH: 208px; IME-MODE: active
+}
+INPUT[type=text].em30limit {
+	WIDTH: 208px; IME-MODE: active
+}
+INPUT[type=text].em45limit {
+	WIDTH: 208px; IME-MODE: active
+}
+INPUT[type=text].em50limit {
+	WIDTH: 208px; IME-MODE: active
+}
+.en4num {
+	WIDTH: 40px; IME-MODE: disabled; TEXT-ALIGN: right; PADDING-RIGHT: 2px
+}
+.en5num {
+	WIDTH: 48px; IME-MODE: disabled; TEXT-ALIGN: right; PADDING-RIGHT: 2px
+}
+INPUT[type=text].en4num {
+	WIDTH: 40px; IME-MODE: disabled; TEXT-ALIGN: right; PADDING-RIGHT: 2px
+}
+INPUT[type=text].en5num {
+	WIDTH: 48px; IME-MODE: disabled; TEXT-ALIGN: right; PADDING-RIGHT: 2px
+}
+.en6cur {
+	WIDTH: 55px; IME-MODE: disabled; TEXT-ALIGN: right; PADDING-RIGHT: 2px
+}
+.en8cur {
+	WIDTH: 70px; IME-MODE: disabled; TEXT-ALIGN: right; PADDING-RIGHT: 2px
+}
+.en10cur {
+	WIDTH: 110px; IME-MODE: disabled; TEXT-ALIGN: right; PADDING-RIGHT: 2px
+}
+INPUT[type=text].en6cur {
+	WIDTH: 75px; IME-MODE: disabled; TEXT-ALIGN: right; PADDING-RIGHT: 2px
+}
+INPUT[type=text].en8cur {
+	WIDTH: 85px; IME-MODE: disabled; TEXT-ALIGN: right; PADDING-RIGHT: 2px
+}
+INPUT[type=text].en10cur {
+	WIDTH: 110px; IME-MODE: disabled; TEXT-ALIGN: right; PADDING-RIGHT: 2px
+}
+.shaid {
+	WIDTH: 50px; IME-MODE: disabled
+}
+.byocd {
+	WIDTH: 55px; IME-MODE: disabled
+}
+.ultsyscd {
+	WIDTH: 55px; IME-MODE: disabled
+}
+INPUT[type=text].shaid {
+	WIDTH: 50px; IME-MODE: disabled
+}
+INPUT[type=text].byocd {
+	WIDTH: 55px; IME-MODE: disabled
+}
+INPUT[type=text].ultsyscd {
+	WIDTH: 55px; IME-MODE: disabled
+}

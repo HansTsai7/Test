@@ -1,0 +1,120 @@
+* {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px
+}
+* HTML {
+	; FILTER: expression(document.execCommand("BackgroundImageCache", false, true))
+}
+HTML {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 100%; WIDTH: 100%; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px
+}
+BODY {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 100%; WIDTH: 100%; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px
+}
+HTML {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 100%; WIDTH: 100%; OVERFLOW-Y: scroll; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px
+}
+BODY {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 100%; FONT-FAMILY: Verdana, 'sans-serif'; WIDTH: 100%; BORDER-BOTTOM-STYLE: none; COLOR: #1c1718; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: #ffffff
+}
+* HTML BODY {
+	
+}
+SELECT {
+	BORDER-TOP: #7f9db9 1px solid; BORDER-RIGHT: #7f9db9 1px solid; BORDER-BOTTOM: #7f9db9 1px solid; BORDER-LEFT: #7f9db9 1px solid; BACKGROUND-COLOR: #ffffff
+}
+INPUT {
+	BORDER-TOP: #7f9db9 1px solid; BORDER-RIGHT: #7f9db9 1px solid; BORDER-BOTTOM: #7f9db9 1px solid; BORDER-LEFT: #7f9db9 1px solid; BACKGROUND-COLOR: #ffffff
+}
+BUTTON {
+	BORDER-TOP: #7f9db9 1px solid; BORDER-RIGHT: #7f9db9 1px solid; BORDER-BOTTOM: #7f9db9 1px solid; BORDER-LEFT: #7f9db9 1px solid; BACKGROUND-COLOR: #ffffff
+}
+TEXTAREA {
+	BORDER-TOP: #7f9db9 1px solid; BORDER-RIGHT: #7f9db9 1px solid; BORDER-BOTTOM: #7f9db9 1px solid; BORDER-LEFT: #7f9db9 1px solid; BACKGROUND-COLOR: #ffffff
+}
+INPUT[type=text] {
+	WIDTH: auto
+}
+INPUT[type=password] {
+	WIDTH: auto
+}
+TEXTAREA {
+	WIDTH: auto
+}
+SELECT {
+	PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px
+}
+INPUT {
+	PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px
+}
+BUTTON {
+	PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px
+}
+OPTION {
+	PADDING-RIGHT: 10px
+}
+TABLE {
+	MARGIN-BOTTOM: 2px
+}
+TH {
+	FONT-WEIGHT: normal
+}
+IMG {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; VERTICAL-ALIGN: bottom; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none
+}
+A {
+	TEXT-DECORATION: underline; VERTICAL-ALIGN: baseline
+}
+A:visited {
+	COLOR: blue !important
+}
+A:hover {
+	COLOR: blue !important
+}
+A:active {
+	COLOR: blue !important
+}
+UL {
+	ZOOM: normal
+}
+OL {
+	ZOOM: normal
+}
+LI {
+	ZOOM: normal
+}
+*:first-child + HTML * {
+	LETTER-SPACING: 0px
+}
+BR {
+	LETTER-SPACING: 0px
+}
+SPAN {
+	WHITE-SPACE: nowrap
+}
+PRE {
+	WORD-WRAP: break-word; WHITE-SPACE: pre-wrap
+}
+A.homelink {
+	FONT-SIZE: 93%; COLOR: #663300
+}
+.clear {
+	CLEAR: both; VISIBILITY: hidden
+}
+.clear HR {
+	DISPLAY: none
+}
+.clearfix:after {
+	HEIGHT: 0px; CONTENT: url("../_img/space.gif"); CLEAR: both; DISPLAY: block
+}
+.clearfix {
+	MIN-HEIGHT: 1%; DISPLAY: inline-block
+}
+* HTML .clearfix {
+	HEIGHT: 1%
+}
+.clearfix {
+	DISPLAY: block
+}
+#topcontents {
+	FONT-FAMILY: "meiryo","ÉÅÉCÉäÉI","ÉqÉâÉMÉmäpÉS Pro W3","HiraginoKaku Gothic Pro", "Osaka", "ÇlÇr ÇoÉSÉVÉbÉN", "sans-serif"
+}

@@ -1,0 +1,51 @@
+#wrapper {
+	WIDTH: 100%; POSITION: relative; CLEAR: both; MIN-HEIGHT: 100%
+}
+#header {
+	HEIGHT: 40px; WIDTH: 1000px; BACKGROUND: url(../_img/bg_header01.png) repeat-x; TEXT-ALIGN: left; CLEAR: both; MARGIN: 0px auto 5px
+}
+#header #headerinner {
+	OVERFLOW: hidden; HEIGHT: 100%; WIDTH: 1000px; BORDER-BOTTOM: #002595 2px solid; POSITION: relative; CLEAR: both; MARGIN: 0px auto 3px
+}
+#header #headerinner #headerinnerleft {
+	WIDTH: 740px; POSITION: absolute; TEXT-ALIGN: left; PADDING-LEFT: 3px; CLEAR: both; LEFT: 0px; BOTTOM: 3px
+}
+#header #headerinner #headerinnerright {
+	RIGHT: 0px; POSITION: absolute; TEXT-ALIGN: right; CLEAR: both; BOTTOM: 3px
+}
+#headerinnerright SPAN {
+	FONT-SIZE: 108%; FONT-WEIGHT: bolder
+}
+#header H1 {
+	FONT-SIZE: 131%; FONT-WEIGHT: bolder; COLOR: #ffffff; MARGIN: 0px auto; DISPLAY: inline
+}
+#main {
+	FONT-SIZE: 90%; WIDTH: 1000px; BACKGROUND-REPEAT: repeat; PADDING-BOTTOM: 25px; TEXT-ALIGN: center; CLEAR: both; MARGIN: 0px auto
+}
+#main SELECT {
+	
+}
+#main INPUT {
+	
+}
+#main BUTTON {
+	
+}
+#main TEXTAREA {
+	
+}
+#main H2 {
+	FONT-SIZE: 100%; MARGIN: 0px auto
+}
+#container {
+	HEIGHT: 100%; WIDTH: 996px; CLEAR: both; MARGIN: 0px auto
+}
+#contents {
+	HEIGHT: 100%; WIDTH: 100%; TEXT-ALIGN: left; CLEAR: both
+}
+#footer {
+	HEIGHT: 22px; WIDTH: 100%; POSITION: absolute; TEXT-ALIGN: center; CLEAR: both; BOTTOM: 0px; BACKGROUND-COLOR: #ffffff
+}
+#footer #footerinner {
+	OVERFLOW: hidden; BORDER-TOP: #002595 2px solid; WIDTH: 1000px; TEXT-ALIGN: right; CLEAR: both
+}

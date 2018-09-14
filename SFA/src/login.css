@@ -1,0 +1,453 @@
+html {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+body {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+div {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+span {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+applet {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+object {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+iframe {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+h1 {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+h2 {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+h3 {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+h4 {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+h5 {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+h6 {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+p {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+blockquote {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+pre {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+a {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+abbr {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+acronym {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+address {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+big {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+cite {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+code {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+del {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+dfn {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+em {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+img {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+ins {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+kbd {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+q {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+s {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+samp {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+small {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+strike {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+strong {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+sub {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+sup {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+tt {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+var {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+b {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+u {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+i {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+center {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+dl {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+dt {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+dd {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+ol {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+ul {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+li {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+fieldset {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+form {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+label {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+legend {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+table {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+caption {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+tbody {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+tfoot {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+thead {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+tr {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+th {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+td {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+article {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+aside {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+canvas {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+details {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+embed {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+figure {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+figcaption {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+footer {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+header {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+hgroup {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+menu {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+nav {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+output {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+ruby {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+section {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+summary {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+time {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+mark {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+audio {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+video {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: inherit; font-family: inherit; font-size: 100%; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+html {
+	line-height: 1;
+}
+ol {
+	list-style: none;
+}
+ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse; border-spacing: 0;
+}
+caption {
+	text-align: left; font-weight: normal; vertical-align: middle;
+}
+th {
+	text-align: left; font-weight: normal; vertical-align: middle;
+}
+td {
+	text-align: left; font-weight: normal; vertical-align: middle;
+}
+q {
+	quotes: none;
+}
+blockquote {
+	quotes: none;
+}
+q::before {
+	content: none;
+}
+q::after {
+	content: none;
+}
+blockquote::before {
+	content: none;
+}
+blockquote::after {
+	content: none;
+}
+a img {
+	border: currentColor; border-image: none;
+}
+article {
+	display: block;
+}
+aside {
+	display: block;
+}
+details {
+	display: block;
+}
+figcaption {
+	display: block;
+}
+figure {
+	display: block;
+}
+footer {
+	display: block;
+}
+header {
+	display: block;
+}
+hgroup {
+	display: block;
+}
+menu {
+	display: block;
+}
+nav {
+	display: block;
+}
+section {
+	display: block;
+}
+summary {
+	display: block;
+}
+body {
+	line-height: 120%; font-family: "メイリオ",meiryo, Arial,Helvetica,Verdana,MS Sans-Serif; font-size: 12px;
+}
+html {
+	line-height: 120%; font-family: "メイリオ",meiryo, Arial,Helvetica,Verdana,MS Sans-Serif; font-size: 12px;
+}
+.ui-widget {
+	line-height: 120%; font-family: "メイリオ",meiryo, Arial,Helvetica,Verdana,MS Sans-Serif; font-size: 12px;
+}
+button {
+	margin: 0px; padding: 0px; line-height: 120%; font-family: "メイリオ",meiryo, Arial,Helvetica,Verdana,MS Sans-Serif; font-size: 12px;
+}
+a:link {
+	color: rgb(11, 105, 193) !important; text-decoration: underline;
+}
+a:visited {
+	color: rgb(11, 105, 193) !important;
+}
+a:hover {
+	color: rgb(224, 62, 92) !important; text-decoration: none;
+}
+a:active {
+	color: rgb(224, 62, 92) !important; text-decoration: none;
+}
+html {
+	width: 100%; height: 100%; text-align: center;
+}
+body {
+	width: 100%; height: 100%; text-align: center;
+}
+#wrapper {
+	margin: 0px auto; width: 800px; height: 100%;
+}
+#dummy {
+	width: 5px; height: 50%; margin-bottom: -150px; float: left; background-color: rgb(255, 0, 0);
+}
+#main {
+	border-radius: 3px; border: 2px solid rgb(53, 133, 165); border-image: none; left: 50%; top: 50%; width: 500px; height: 300px; margin-top: -150px; margin-left: -250px; position: absolute;
+}
+#main h2 {
+	background: linear-gradient(rgb(129, 192, 232) 1%, rgb(53, 133, 165) 100%); padding: 7px 0px; color: rgb(255, 255, 255); line-height: 1.4; letter-spacing: 0.07em; font-size: 18px; font-weight: bold; margin-bottom: 30px;
+}
+dl.login_form {
+	margin: 0px auto; width: 480px;
+}
+dl.change_form {
+	margin: 0px auto; width: 480px;
+}
+dl.reset_form {
+	margin: 0px auto; width: 480px;
+}
+dl.login_form dt {
+	margin: 0px 0px 20px; text-align: right; line-height: 24px; letter-spacing: 0.07em; clear: left; font-size: 16px; vertical-align: middle; float: left;
+}
+dl.change_form dt {
+	margin: 0px 0px 20px; text-align: right; line-height: 24px; letter-spacing: 0.07em; clear: left; font-size: 16px; vertical-align: middle; float: left;
+}
+dl.reset_form dt {
+	margin: 0px 0px 20px; text-align: right; line-height: 24px; letter-spacing: 0.07em; clear: left; font-size: 16px; vertical-align: middle; float: left;
+}
+dl.login_form dt {
+	width: 7em;
+}
+dl.change_form dt {
+	width: 13em;
+}
+dl.reset_form dt {
+	width: 7em;
+}
+dl.login_form dd {
+	text-align: center; margin-bottom: 20px;
+}
+dl.change_form dd {
+	text-align: center; margin-bottom: 20px;
+}
+dl.reset_form dd {
+	text-align: center; margin-bottom: 20px;
+}
+dl.login_form dd {
+	margin-left: 7.5em;
+}
+dl.change_form dd {
+	margin-left: 13.5em;
+}
+dl.reset_form dd {
+	margin-left: 7.5em;
+}
+#main input[type='text'] {
+	padding: 0px 2px; border-radius: 3px; border: 1px solid rgb(179, 202, 209); border-image: none; height: 24px; font-size: 14px;
+}
+#main input[type='password'] {
+	padding: 0px 2px; border-radius: 3px; border: 1px solid rgb(179, 202, 209); border-image: none; height: 24px; font-size: 14px;
+}
+div.button_area {
+	text-align: right; margin-right: 50px;
+}
+div.button_area p {
+	margin: 20px 0px;
+}
+.bt {
+	background: none; padding: 3px 15px; border-radius: 3px; border: currentColor; border-image: none; height: 30px; text-align: center; color: white; letter-spacing: 0.07em; font-family: "メイリオ",meiryo, Arial,Helvetica,Verdana,MS Sans-Serif; font-size: 12px; font-weight: bold; text-decoration: none; vertical-align: middle; display: inline-block; cursor: pointer; -ms-zoom: 1; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px;
+}
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
+	background: none; padding: 3px 15px; border-radius: 3px; border: currentColor; border-image: none; height: 30px; text-align: center; color: white; letter-spacing: 0.07em; font-family: "メイリオ",meiryo, Arial,Helvetica,Verdana,MS Sans-Serif; font-size: 12px; font-weight: bold; text-decoration: none; vertical-align: middle; display: inline-block; cursor: pointer; -ms-zoom: 1; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px;
+}
+.bt:visited {
+	color: white !important;
+}
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close:visited {
+	color: white !important;
+}
+.bt:hover {
+	color: white !important;
+}
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close:hover {
+	color: white !important;
+}
+.bt_blue {
+	background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMyNzljNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzE3NjhiZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=="); border: 1px solid rgb(25, 97, 174) !important; border-image: none !important; -pie-background: linear-gradient(top, #3279c5, #1768bd); behavior: url(../css/PIE.htc);
+}
+.bt_blue:hover {
+	background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjEwMCUiIHgyPSI1MCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMyNzljNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzE3NjhiZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=="); -pie-background: linear-gradient(bottom, #3279c5, #1768bd); behavior: url(../css/PIE.htc);
+}
+#blockLayer {
+	left: 0px; top: 0px; width: 100%; height: 100%; display: none; position: fixed; z-index: 10100; opacity: 0.3; background-color: rgb(150, 150, 150);
+}
+#blockLayer img {
+	left: 50%; top: 50%; width: 96px; height: 96px; margin-top: -48px; margin-left: -48px; position: absolute;
+}
+input[type='text'] {
+	padding: 0px 5px; border: 1px solid rgb(195, 195, 195); border-image: none; height: 24px; line-height: 24px;
+}
