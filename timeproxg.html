@@ -1,0 +1,586 @@
+
+
+<SCRIPT LANGUAGE="JavaScript">
+//---- Enum Values ----
+var conMainMenu = 0;
+var conSubMenu = 1;
+var conOptionMenuNo = 2;
+var conProgramID0 = 3;
+var conArg0 = 4;
+var conProgramID1 = 5;
+var conArg1 = 6;
+var conProgramID2 = 7;
+var conArg2 = 8;
+var conSetupAtt = 9;
+var conSetupPay = 10;
+var conSetupHuman = 11;
+var conSetupCant = 12;
+var conSetupAcs = 13;
+var conSetupEtc_0 = 14;
+var conSetupEtc_1 = 15;
+var conSetupEtc_2 = 16;
+var conSetupEtc_3 = 17;
+var conSetupEtc_4 = 18;
+var conTitle = 19;
+var conOpeLevel00 = 20;
+var conOpeLevel01 = 21;
+var conOpeLevel02 = 22;
+var conOpeLevel03 = 23;
+var conOpeLevel04 = 24;
+var conOpeLevel05 = 25;
+var conOpeLevel06 = 26;
+var conOpeLevel07 = 27;
+var conOpeLevel08 = 28;
+var conOpeLevel09 = 29;
+var conOpeLevel10 = 30;
+var conOpeLevel11 = 31;
+var conOpeLevel12 = 32;
+var conOption0 = 33;
+var conOption1 = 34;
+var conOption2 = 35;
+var conOption3 = 36;
+var conOption4 = 37;
+var conOption5 = 38;
+var conOption6 = 39;
+var conOption7 = 40;
+var conOption8 = 41;
+var conOption9 = 42;
+var conOption10 = 43;
+var conOption11 = 44;
+var conOption12 = 45;
+var conOption13 = 46;
+var conOption14 = 47;
+var conOption15 = 48;
+var conOption16 = 49;
+var conOption17 = 50;
+var conOption18 = 51;
+var conOption19 = 52;
+var conIcon = 53;
+var conLargeMainMenu = 54;
+var conSupervisorLevel = 13;
+var conHandingLevel_None = 0;
+var conHandingLevel_Disp = 1;
+var conHandingLevel_Input = 2;
+var conDBError = 100;
+var conSelectEmpMax =50;
+var conMenuFlg = 1;
+var constrDwmenudfFile ="\Dwmenudf.txt"
+var constrRedirect ="Xgw0000.asp"
+var constrXgw0010 ="Xgw0010.asp"
+var constrRedirectLogin ="Login.asp"
+var constrImage1 = "Bullet1.gif"
+var constrImage2 = "Back.gif"
+var constrImage_OpenMail = "OpenMail.gif"
+var constrImage_CloseMail = "ClsdMail.gif"
+var constrPagePath ="page/"
+var constrDataPath = "page/data/"
+var constrImagePath ="images/"
+var constrIncludePath ="include/"
+</SCRIPT>
+<HTML>
+<HEAD>
+<LINK rel='SHORTCUT ICON' href='./favicon.ico'>
+<META http-equiv='content-type' content='text/html; charset=shift_jis'>
+<META http-equiv='content-script-type' content='javascript'>
+<META http-equiv='Content-Style-Type' content='text/css'>
+<META name='save' content='favorite'>
+<LINK rel='stylesheet' href='./css/XgwDesign_blue.css' type='text/css'>
+<TITLE>TimePro-XG Web</TITLE>
+</HEAD>
+<BODY class='top'>
+<FORM action=Login.asp name=frmLOGIN method=post target=_self>
+<input type=hidden name=PAGESTATUS value=''>
+<input type=hidden name=ERRBACK value=''>
+<DIV align=center>
+<TABLE border=0 cellspacing=0 cellpadding=0 class=top_plate>
+<TR><TD class=top_tl><img src='./images/space.gif' width=7 height=7 alt=''></TD>
+<TD class='top_tc' width='100%'><img src='./images/space.gif' width=7 height=7 alt=''></TD>
+<TD class=top_tr><img src='./images/space.gif' width=7 height=7 alt=''></TD></TR>
+<TR><TD class='top_ml'><img src='./images/space.gif' width='7' height='7' alt=''></TD>
+<TD align=center>
+<img src='./images/space.gif' width=7 height=20 alt=''><BR>
+<TABLE border=0 cellspacing=0 cellpadding=8>
+<TR><TD class=rogo_top><IMG src='./images/space.gif' width='300' height='80' alt=''></TD></TR>
+</TABLE>
+<img src='./images/space.gif' width=7 height=20 alt=''><BR>
+</TD>
+<TD class='top_mr'><img src='./images/space.gif' width='7' height='7' alt=''></TD></TR></TABLE>
+<TABLE border=0 cellspacing=0 cellpadding=0 class=top_plate2>
+<TR><TD class='top_ml2'><img src='./images/space.gif' width='7' height='7' alt=''></TD><TD align=center>
+<img src='./images/space.gif' width=7 height=20 alt=''><BR>
+<TABLE border=0 cellspacing=0 cellpadding=4>
+<TR><TD align=center  colspan=2 class=top_plate4><TABLE border=0 cellspacing=0 cellpadding=4>
+<TR><TD align=right class=top_plate3>個人コード：</TD>
+<TD align=left class=top_plate3><INPUT type=text autocomplete=off maxlength=10  size=20 name=LoginID onkeypress="CheckKeyPress();" onkeydown="OnKeyDown();" onpaste="CheckPaste();" value="" Onfocus=this.form.LoginID.select() style='ime-mode: disabled'></TD></TR>
+<TR><TD align=right class=top_plate3>パスワード：</TD>
+<TD align=left class=top_plate3><INPUT type=password style='display:none'>
+<INPUT type=password autocomplete=off maxlength=8 size=20 name=PassWord onkeypress="CheckKeyPress();" onkeydown="OnKeyDown();" onpaste="CheckPaste();" value="" Onfocus=this.form.PassWord.select()></TD></TR></TABLE></TD></TR>
+<TR><TD><INPUT type=image src='./images/botun_rogin.gif' border=0 name=btnLogin width=150 height=22 alt='ﾛｸﾞｲﾝ' OnClick='javascript:Enter(document.frmLOGIN);return false'></TD>
+<TD><INPUT type=image src='./images/botun_password.gif' border=0 name=btnNewPass width=150 height=22 alt='ﾊﾟｽﾜｰﾄﾞ登録' OnClick='javascript:NewPassWordEnter(document.frmLOGIN);return false'></TD></TR><BR>
+<TR><TD align=center colspan=2 class=top_plate4>Copyright (C) 2006-2013 AMANO, All rights reserved.</TD></TR>
+<TR><TD align=center colspan=2><img src='./images/space.gif' width=7 height=10 alt=''></TD></TR>
+</TABLE></TD><TD class='top_mr2'><img src='./images/space.gif' width='7' height='7' alt=''></TD></TR>
+<TR><TD class=top_bl><img src='./images/space.gif' width=7 height=7 alt=''></TD>
+<TD class=top_bc width='100%'><img src='./images/space.gif' width=7 height=7 alt=''></TD>
+<TD class=top_br><img src='./images/space.gif' width=7 height=7 alt=''></TD></TR></TABLE>
+<BR><INPUT type=hidden name=PROSESS value=""></DIV><BR>
+</FORM>
+</BODY>
+</HTML>
+
+
+<SCRIPT language=JavaScript>
+
+	switch (7)
+	{
+		case 1:
+// 2011.06.23 Ver8.10 機能変更【XG81_010】Start
+//			alert("個人コードの入力がありません。");
+			var strMsg = "個人コードの入力がありません。";
+			window.setTimeout('alert(strMsg)', 0);
+// 2011.06.23 Ver8.10 機能変更【XG81_010】End
+			document.frmLOGIN.LoginID.focus();
+			break;
+		case 2:
+// 2011.06.23 Ver8.10 機能変更【XG81_010】Start
+//			alert("個人コードが登録されていません。");
+			var strMsg = "個人コードが登録されていません。";
+			window.setTimeout('alert(strMsg)', 0);
+// 2011.06.23 Ver8.10 機能変更【XG81_010】End
+			document.frmLOGIN.LoginID.focus();
+			break;
+		case 3:
+// 2011.06.23 Ver8.10 機能変更【XG81_010】Start
+//			alert("パスワードの有効期限が切れました。パスワードを変更してください。");
+			var strMsg = "パスワードの有効期限が切れました。パスワードを変更してください。";
+			window.setTimeout('alert(strMsg)', 0);
+// 2011.06.23 Ver8.10 機能変更【XG81_010】End
+			document.frmLOGIN.NewPassWord.focus();
+			break;
+		case 4:
+// 2011.06.23 Ver8.10 機能変更【XG81_010】Start
+//			alert("パスワードが違います。再度入力してください。");
+			var strMsg = "パスワードが違います。再度入力してください。";
+			window.setTimeout('alert(strMsg)', 0);
+// 2011.06.23 Ver8.10 機能変更【XG81_010】End
+			document.frmLOGIN.PassWord.focus();
+			break;
+		case 5:
+// 2011.06.23 Ver8.10 機能変更【XG81_010】Start
+//			alert("半角以外の文字を入力しています。");
+			var strMsg = "半角以外の文字を入力しています。";
+			window.setTimeout('alert(strMsg)', 0);
+// 2011.06.23 Ver8.10 機能変更【XG81_010】End
+			document.frmLOGIN.PassWord.focus();
+			break;
+		case 6:
+			document.all.btnNewPass.focus();
+			break;
+		case 7:
+			document.frmLOGIN.LoginID.focus();
+			break;
+		case 8:
+			document.frmLOGIN.NewPassWord.focus();
+			break;
+		case 9:
+// 2011.06.23 Ver8.10 機能変更【XG81_010】Start
+//			alert("個人コードが登録されていません。");
+			var strMsg = "個人コードが登録されていません。";
+			window.setTimeout('alert(strMsg)', 0);
+// 2011.06.23 Ver8.10 機能変更【XG81_010】End
+			break;
+
+		case 11:
+			document.frmLOGIN.NewPassWord.focus();
+			break;
+		case 13:
+			document.frmLOGIN.LoginID.focus();
+			break;
+		case 14:
+			document.frmLOGIN.LoginID.focus();
+			break;
+		case 15:
+			document.frmLOGIN.NewPassWord.focus();
+			break;
+		case 16:
+			document.frmLOGIN.ManagerPassWord.focus();
+			break;
+		case 17:
+// 2011.06.23 Ver8.10 機能変更【XG81_010】Start
+//			alert("パスワードが違います。再度入力してください。");
+			var strMsg = "パスワードが違います。再度入力してください。";
+			window.setTimeout('alert(strMsg)', 0);
+// 2011.06.23 Ver8.10 機能変更【XG81_010】End
+			document.frmLOGIN.LoginID.focus();
+			break;
+		case 18:
+			document.frmLOGIN.LoginID.focus();
+			break;
+
+		case 20:
+// 2011.06.23 Ver8.10 機能変更【XG81_010】Start
+//			alert("入力データに誤りがあります。\nパスワードの最後に半角スペースは使用できません。");
+			var strMsg = "入力データに誤りがあります。\nパスワードの最後に半角スペースは使用できません。";
+			window.setTimeout('alert(strMsg)', 0);
+// 2011.06.23 Ver8.10 機能変更【XG81_010】End
+			document.frmLOGIN.PassWord.focus();
+			break;
+
+		case -1:
+// 2011.06.23 Ver8.10 機能変更【XG81_010】Start
+//			alert("その他のエラーが発生しました。");
+			var strMsg = "その他のエラーが発生しました。";
+			window.setTimeout('alert(strMsg)', 0);
+// 2011.06.23 Ver8.10 機能変更【XG81_010】End
+			break;
+		default:
+			break;
+	}
+
+</SCRIPT>
+
+<SCRIPT language=JavaScript>
+var m_bBtnFlg = false;
+var m_strCode = "1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+function Enter(form)
+{
+	if (m_bBtnFlg)
+	{
+		for (i = 0; i < document.frmLOGIN.LoginID.value.length; i++)
+		{
+			if (m_strCode.indexOf(document.frmLOGIN.LoginID.value.charAt(i), 0) < 0)
+			{
+// 2011.06.23 Ver8.10 機能変更【XG81_010】Start
+//				alert("個人コードには、半角英数字を指定して下さい。");
+				window.setTimeout('alert("個人コードには、半角英数字を指定して下さい。")', 0);
+// 2011.06.23 Ver8.10 機能変更【XG81_010】End
+				document.frmLOGIN.LoginID.focus();
+				return true;
+			}
+		}
+		m_bBtnFlg = false;
+		document.frmLOGIN.PROSESS.value = "REFER";
+		
+		document.frmLOGIN.PAGESTATUS.value = "REFER";
+		
+		document.frmLOGIN.submit();
+		return true;
+	}
+	return true;
+}
+
+
+function ManagerEnter(form)
+{
+	if (m_bBtnFlg)
+	{
+		for (i = 0; i < document.frmLOGIN.LoginID.value.length; i++)
+		{
+			if (m_strCode.indexOf(document.frmLOGIN.LoginID.value.charAt(i), 0) < 0)
+			{
+// 2011.06.23 Ver8.10 機能変更【XG81_010】Start
+//				alert("個人コードには、半角英数字を指定して下さい。");
+				window.setTimeout('alert("個人コードには、半角英数字を指定して下さい。")', 0);
+// 2011.06.23 Ver8.10 機能変更【XG81_010】End
+				document.frmLOGIN.LoginID.focus();
+				return true;
+			}
+		}
+		m_bBtnFlg = false;
+		document.frmLOGIN.PROSESS.value = "MANAGERREFER";
+		
+		document.frmLOGIN.PAGESTATUS.value = "MANAGERREFER";
+		
+		document.frmLOGIN.submit();
+	}
+	return true;
+}
+
+function ManagerCancel(form)
+{
+	if (m_bBtnFlg)
+	{
+		m_bBtnFlg = false;
+		document.frmLOGIN.PROSESS.value = "MANAGERCANCEL"
+		document.frmLOGIN.submit()
+	}
+	return true;
+}
+
+function PassWordTrimRight(strPassWord)
+{
+	var iLength = strPassWord.length;
+	var strTemp = "";
+	do
+	{
+		if (iLength > 1)
+		{
+			strTemp = strPassWord.substring(iLength - 1, iLength);
+		}
+		else
+		{
+			if (strPassWord == " ")
+			{
+				strPassWord = "";
+			}
+			break;
+		}
+		if (strTemp == " ")
+		{
+			strPassWord = strPassWord.substring(0, iLength - 1);
+		}
+		else
+		{
+			break;
+		}
+		iLength = strPassWord.length;
+	} while (iLength > 0)
+	return strPassWord;
+}
+
+function NewPassWordEnter(form)
+{
+	if (m_bBtnFlg)
+	{
+		for (i = 0; i < document.frmLOGIN.LoginID.value.length; i++)
+		{
+			if (m_strCode.indexOf(document.frmLOGIN.LoginID.value.charAt(i), 0) < 0)
+			{
+// 2011.06.23 Ver8.10 機能変更【XG81_010】Start
+//				alert("個人コードには、半角英数字を指定して下さい。");
+				window.setTimeout('alert("個人コードには、半角英数字を指定して下さい。")', 0);
+// 2011.06.23 Ver8.10 機能変更【XG81_010】End
+				document.frmLOGIN.LoginID.focus();
+				return true;
+			}
+		}
+		m_bBtnFlg = false;
+		document.frmLOGIN.PROSESS.value = "PASSENTER"
+		
+		document.frmLOGIN.PAGESTATUS.value = "PASSENTER";
+		
+		document.frmLOGIN.submit()
+	}
+	return true;
+}
+
+function PassWordRegister(form)
+{
+	if (m_bBtnFlg)
+	{
+
+		if (document.frmLOGIN.ConfirmPassWord.value != document.frmLOGIN.NewPassWord.value)
+
+		{
+// 2011.06.23 Ver8.10 機能変更【XG81_010】Start
+//			alert("パスワードを再入力して下さい。")
+			window.setTimeout('alert("パスワードを再入力して下さい。")', 0);
+// 2011.06.23 Ver8.10 機能変更【XG81_010】End
+			document.frmLOGIN.ConfirmPassWord.focus();
+			return false;
+		}
+		document.frmLOGIN.NewPassWord.value = GetDecode(document.frmLOGIN.NewPassWord.value);
+		m_bBtnFlg = false;
+		document.frmLOGIN.PROSESS.value = "REGISTER"
+		
+		document.frmLOGIN.PAGESTATUS.value = "REGISTER";
+		
+		document.frmLOGIN.submit()
+	}
+	return true;
+}
+
+function Cancel(form)
+{
+	if (m_bBtnFlg)
+	{
+		m_bBtnFlg = false;
+		document.frmLOGIN.PROSESS.value = "CANCEL"
+		document.frmLOGIN.submit()
+	}
+	return true;
+}
+
+function CheckEnter(e)
+{
+	if (e.which == 13)
+	{
+		Enter(document.frmLOGIN);	
+	}
+ 	return true;
+}
+
+function EventShiftChk()
+{
+	if (event.shiftKey)
+	{
+		window.event.returnValue = false;
+	}
+	return;
+}
+
+function GetDecode(strSource)
+{
+	strSource.replace("&quot;", "\"");
+	return strSource;
+}
+
+</SCRIPT>
+
+
+
+<SCRIPT language=javascript>
+m_bBtnFlg = true;
+
+var PasteElement;
+var iSelectionStart;
+function OnKeyDown()
+{
+	if (event.keyCode == 27)
+	{
+		if (GetSelectionLength(event.srcElement) > 0)
+		{
+			event.returnValue = false;
+		}
+	}
+}
+function CheckKeyPress()
+{
+	var srcElement = event.srcElement;
+	if (event.keyCode == 13)
+	{
+		event.returnValue = true;
+		return;
+	}
+	if (event.keyCode == 27)
+	{
+		event.srcElement.value = "";
+		event.returnValue = true;
+		return;
+	}
+	this.FormatTextBox(false);
+	event.returnValue = false;
+	try
+	{
+		srcElement.onchange();
+	}
+	catch (e)
+	{
+	}
+}
+function CheckPaste()
+{
+	var srcElement = event.srcElement;
+	var strPasteText = window.clipboardData.getData("Text");
+
+	iSelectionStart = GetSelectionStart(srcElement);
+	if (strPasteText != null)
+	{
+		if (strPasteText != "")
+		{
+			var selLength = GetSelectionLength(srcElement);
+			if (selLength <= 0)
+			{
+				if (srcElement.value.length >= srcElement.maxLength)
+				{
+					return;
+				}
+			}
+			FormatTextBox(true);
+			PasteElement = srcElement;
+			window.setTimeout("ResetSelectionStart()", 1);
+		}
+		event.returnValue = false;
+	}
+}
+function ResetSelectionStart()
+{
+	SetSelectionStart(PasteElement, iSelectionStart);
+}
+function SetSelectionStart(srcElement, nPos)
+{
+	var txtRange = srcElement.createTextRange();
+	txtRange.move("character", nPos);
+	txtRange.select();
+}
+function FormatTextBox(bPaste)
+{
+	var srcElement = event.srcElement;
+	var nMaxLength = srcElement.maxLength;
+	var strChangedText = bPaste ? window.clipboardData.getData("Text") : String.fromCharCode(event.keyCode);
+
+	strChangedText = strChangedText.replace(/[^\x20-\x7F]/g, "");
+	var strNewText = GetChangedText(srcElement, strChangedText);
+
+	if (bPaste)
+	{
+		// コピー
+		if (strChangedText != null)
+		{
+			strChangedText = strChangedText.substr(0, srcElement.maxLength - (srcElement.value.length - GetSelectionLength(srcElement)));
+			strNewText = GetChangedText(srcElement, strChangedText);
+			srcElement.value = strNewText;
+		}
+	}
+	else
+	{
+		// 入力
+		if (strNewText.length <= nMaxLength)
+		{
+			srcElement.value = strNewText;
+		}
+		else
+		{
+			return;
+		}
+		SetSelectionStart(srcElement, iPos);
+	}
+}
+
+function GetChangedText(srcElement, strChangedText)
+{
+	var nMaxLength = srcElement.maxLength;
+	var selRange1 = document.selection.createRange();
+	var selRange2 = document.selection.createRange();
+	var txtRange = srcElement.createTextRange();
+	selRange1.setEndPoint("EndToStart", txtRange);
+	selRange2.setEndPoint("StartToEnd", txtRange);
+
+	iPos = selRange1.text.length + strChangedText.length;
+	if (selRange1.text.length + strChangedText.length <= nMaxLength) 
+	{
+		iSelectionStart = selRange1.text.length + strChangedText.length;
+	}
+	else
+	{
+		iSelectionStart = nMaxLength;
+	}
+
+	return selRange1.text + strChangedText + selRange2.text;
+}
+
+function GetSelectionLength(srcElement)
+{
+	var selRange1 = document.selection.createRange();
+	var selRange2 = document.selection.createRange();
+	var txtRange = srcElement.createTextRange();
+	selRange1.setEndPoint("StartToEnd", txtRange);
+	selRange2.setEndPoint("EndToEnd", txtRange);
+	return selRange2.text.length - selRange1.text.length;
+}
+function GetSelectionStart(srcElement)
+{
+	var selRange = document.selection.createRange();
+	selRange.setEndPoint("EndToStart", srcElement.createTextRange());
+	return selRange.text.length;
+}
+function SetSelectionStart(srcElement, iPos)
+{
+	var txtRange = srcElement.createTextRange();
+	txtRange.move("character", iPos);
+	txtRange.select();
+}
+
+</SCRIPT>
+
+
